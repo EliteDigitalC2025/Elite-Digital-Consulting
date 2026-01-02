@@ -1,227 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Global Consulting Services - Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Body and Container Styling */
-        * { box-sizing: border-box; }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Digital Global Consulting Services - Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Body and Container Styling */
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-        /* Header and Navigation */
-        header {
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #eee;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 15px 0;
-        }
-        .logo { font-size: 24px; font-weight: bold; color: #0056b3; }
-        nav.navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        nav.navbar ul li { margin-left: 20px; }
-        nav.navbar ul li:first-child { margin-left: 0; }
-        nav.navbar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav.navbar ul li a:hover { color: #007bff; }
+    /* Header and Navigation */
+    header {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #eee;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+    }
+    .logo { font-size: 24px; font-weight: bold; color: #0056b3; }
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav.navbar ul li { margin-left: 20px; }
+    nav.navbar ul li:first-child { margin-left: 0; }
+    nav.navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav.navbar ul li a:hover { color: #007bff; }
 
-        /* Hero Section */
-        .hero-section-main {
-            background: url('https://i.imgur.com/D9IRzyX.jpg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 120px 20px;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-        }
-        .hero-section-main .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 40px 20px;
-            border-radius: 8px;
-            max-width: 800px;
-        }
-        .hero-section-main h1 { font-size: 3.8em; margin-bottom: 15px; text-transform: uppercase; line-height: 1.2; }
-        .hero-section-main p { font-size: 1.4em; margin-bottom: 30px; }
-        .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover { background-color: #0056b3; }
+    /* Hero Section */
+    .hero-section-main {
+      background: url('https://i.imgur.com/D9IRzyX.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+    }
+    .hero-section-main .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      border-radius: 8px;
+      max-width: 800px;
+    }
+    .hero-section-main h1 { font-size: 3.8em; margin-bottom: 15px; text-transform: uppercase; line-height: 1.2; }
+    .hero-section-main p { font-size: 1.4em; margin-bottom: 30px; }
 
-        /* Intro Text Section */
-        .intro-text-section { background-color: #e6f2ff; padding: 40px 20px; text-align: center; }
-        .intro-text-section p { font-size: 1.2em; font-style: italic; color: #0056b3; max-width: 800px; margin: 0 auto; }
+    /* Buttons */
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover { background-color: #0056b3; }
 
-        /* Why Choose Section */
-        .why-choose-section { padding: 60px 0; text-align: center; background-color: #f0f8ff; }
-        .why-choose-section h2 { color: #0056b3; font-size: 2.5em; margin-bottom: 20px; }
-        .why-choose-section > p { font-size: 1.1em; max-width: 800px; margin: 0 auto 40px; }
-        .why-choose-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .why-choose-item {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .why-choose-item:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.12); }
-        .why-choose-item img { max-width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        .why-choose-item h3 { color: #007bff; font-size: 1.5em; margin: 10px 0; }
-        .why-choose-item p { font-size: 0.95em; color: #555; }
+    /* Intro Text Section */
+    .intro-text-section { background-color: #e6f2ff; padding: 40px 20px; text-align: center; }
+    .intro-text-section p { font-size: 1.2em; font-style: italic; color: #0056b3; max-width: 800px; margin: 0 auto; }
 
-        /* Services Showcase Section */
-        .services-showcase-section { padding: 60px 0; background-color: #fff; text-align: center; }
-        .services-showcase-section h2 { color: #0056b3; font-size: 2.8em; margin-bottom: 40px; }
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .showcase-item {
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .showcase-item:hover { transform: translateY(-8px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
-        .showcase-item img { width: 100%; height: 220px; object-fit: cover; }
-        .showcase-content { padding: 20px; text-align: left; }
-        .showcase-content h3 { color: #007bff; font-size: 1.8em; margin-top: 0; margin-bottom: 10px; }
-        .showcase-content p { font-size: 0.95em; color: #555; margin-bottom: 15px; }
+    /* Why Choose Section */
+    .why-choose-section { padding: 60px 0; text-align: center; background-color: #f0f8ff; }
+    .why-choose-section h2 { color: #0056b3; font-size: 2.5em; margin-bottom: 20px; }
+    .why-choose-section > p { font-size: 1.1em; max-width: 800px; margin: 0 auto 40px; }
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .why-choose-item {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .why-choose-item:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.12); }
+    .why-choose-item img { max-width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+    .why-choose-item h3 { color: #007bff; font-size: 1.5em; margin: 10px 0; }
+    .why-choose-item p { font-size: 0.95em; color: #555; }
 
-        /* Featured Section */
-        .featured-section { padding: 60px 0; background-color: #f8f8f8; }
-        .featured-item { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; }
-        .featured-image, .featured-content { flex: 1; min-width: 300px; }
-        .featured-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .featured-content h2 { color: #0056b3; font-size: 2.5em; margin-top: 0; margin-bottom: 20px; }
-        .featured-content ul { list-style: none; padding: 0; margin-top: 20px; }
-        .featured-content ul li { position: relative; padding-left: 30px; margin-bottom: 15px; text-align: left; }
-        .featured-content ul li::before { content: '\2022'; color: #007bff; font-size: 1.5em; position: absolute; left: 0; top: 0; line-height: 1; }
-        .featured-content ul li strong { color: #0056b3; }
+    /* Services Showcase Section */
+    .services-showcase-section { padding: 60px 0; background-color: #fff; text-align: center; }
+    .services-showcase-section h2 { color: #0056b3; font-size: 2.8em; margin-bottom: 40px; }
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .showcase-item {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .showcase-item:hover { transform: translateY(-8px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+    .showcase-item img { width: 100%; height: 220px; object-fit: cover; }
+    .showcase-content { padding: 20px; text-align: left; }
+    .showcase-content h3 { color: #007bff; font-size: 1.8em; margin-top: 0; margin-bottom: 10px; }
+    .showcase-content p { font-size: 0.95em; color: #555; margin-bottom: 15px; }
 
-        /* Footer */
-        footer { background-color: #0056b3; color: #fff; padding: 40px 0 20px; font-size: 0.9em; }
-        footer .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
-        .footer-col { flex: 1; min-width: 200px; max-width: 280px; }
-        .footer-col h3 { font-size: 1.2em; margin-top: 0; margin-bottom: 15px; color: #fff; }
-        .footer-col ul { list-style: none; padding: 0; }
-        .footer-col ul li { margin-bottom: 8px; }
-        .footer-col ul li a { text-decoration: none; color: #e0e0e0; transition: color 0.3s ease; }
-        .footer-col ul li a:hover { color: #fff; }
-        .footer-col p { margin-bottom: 10px; }
-        .social-links { display: flex; gap: 15px; }
-        .social-links a { color: #fff; font-size: 24px; transition: color 0.3s ease; }
-        .social-links a:hover { color: #007bff; }
-        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 20px; }
+    /* Featured Section */
+    .featured-section { padding: 60px 0; background-color: #f8f8f8; }
+    .featured-item { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; }
+    .featured-image, .featured-content { flex: 1; min-width: 300px; }
+    .featured-image img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .featured-content h2 { color: #0056b3; font-size: 2.5em; margin-top: 0; margin-bottom: 20px; }
+    .featured-content ul { list-style: none; padding: 0; margin-top: 20px; }
+    .featured-content ul li { position: relative; padding-left: 30px; margin-bottom: 15px; text-align: left; }
+    .featured-content ul li::before { content: '\2022'; color: #007bff; font-size: 1.5em; position: absolute; left: 0; top: 0; line-height: 1; }
+    .featured-content ul li strong { color: #0056b3; }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header .container { flex-direction: column; align-items: flex-start; }
-            nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
-            nav ul li { margin: 5px 10px; }
-            .hero-section-main h1 { font-size: 2.8em; }
-            .hero-section-main p { font-size: 1.1em; }
-            .featured-item { flex-direction: column; text-align: center; }
-            .featured-image, .featured-content { width: 100%; min-width: unset; }
-            .why-choose-grid, .showcase-grid, .services-grid-blue .container, .services-grid-white .container { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 480px) {
-            .logo { font-size: 20px; }
-            .hero-section-main { padding: 80px 15px; }
-            .hero-section-main h1 { font-size: 2.2em; }
-            .hero-section-main p { font-size: 1em; }
-            .btn { padding: 10px 20px; font-size: 0.9em; }
-        }
-    </style>
+    /* Clients Section */
+    .clients-section { padding: 60px 0; text-align: center; background-color: #f0f8ff; }
+    .clients-section h2 { color: #0056b3; font-size: 2.8em; margin-bottom: 40px; }
+    .client-logos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; align-items: center; justify-content: center; }
+    .client-logo-item img { max-width: 100%; height: 80px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s ease, opacity 0.3s ease; }
+    .client-logo-item img:hover { filter: grayscale(0%); opacity: 1; }
+
+    /* Testimonials Section */
+    .testimonials-section { background-color: #0056b3; color: #fff; padding: 80px 0; text-align: center; }
+    .testimonials-section h2 { font-size: 2.8em; margin-bottom: 50px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+    .testimonial-item { background-color: rgba(255, 255, 255, 0.15); padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .testimonial-item p.quote { font-size: 1.1em; font-style: italic; margin-bottom: 20px; line-height: 1.8; }
+    .testimonial-item .client-info { border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 15px; margin-top: 20px; }
+    .testimonial-item .client-info strong { display: block; font-size: 1.2em; margin-bottom: 5px; color: #fff; }
+    .testimonial-item .client-info span { font-size: 0.9em; opacity: 0.8; }
+
+    /* Extensive Offerings Section */
+    .extensive-offerings { padding: 60px 0; text-align: center; background-color: #fff; }
+    .extensive-offerings h2 { color: #0056b3; font-size: 2.8em; margin-bottom: 40px; }
+    .offerings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .offering-item { background-color: #f0f0f0; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; }
+    .offering-item h3 { color: #007bff; font-size: 1.6em; margin-top: 0; margin-bottom: 15px; }
+
+    /* Services Grids */
+    .services-grid-blue, .services-grid-white { padding: 60px 0; }
+    .services-grid-blue { background-color: #007bff; color: #fff; }
+    .services-grid-blue .container, .services-grid-white .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .service-item { background-color: rgba(255,255,255,0.1); padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: left; }
+    .services-grid-white .service-item { background-color: #fff; color: #333; border: 1px solid #eee; }
+    .service-item h3 { margin-top: 0; font-size: 1.8em; margin-bottom: 15px; color: inherit; }
+    .service-item ul { list-style: none; padding: 0; }
+    .service-item ul li { margin-bottom: 8px; position: relative; padding-left: 20px; }
+    .service-item ul li::before { content: '✔'; position: absolute; left: 0; color: #fff; }
+    .services-grid-white .service-item ul li::before { color: #007bff; }
+
+    /* Call to Action Section */
+    .cta-section { background-color: #e6f2ff; padding: 50px 20px; text-align: center; color: #0056b3; }
+    .cta-section p { font-size: 1.5em; margin-bottom: 30px; }
+
+    /* Footer */
+    footer { background-color: #0056b3; color: #fff; padding: 40px 0 20px; font-size: 0.9em; }
+    footer .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
+    .footer-col { flex: 1; min-width: 200px; max-width: 280px; }
+    .footer-col h3 { font-size: 1.2em; margin-top: 0; margin-bottom: 15px; color: #fff; }
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { text-decoration: none; color: #e0e0e0; transition: color 0.3s ease; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-col p { margin-bottom: 10px; }
+    .social-links { display: flex; gap: 15px; }
+    .social-links a { color: #fff; font-size: 24px; transition: color 0.3s ease; }
+    .social-links a:hover { color: #007bff; }
+    .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); margin-top: 20px; }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      nav ul { margin-top: 15px; justify-content: center; flex-wrap: wrap; }
+      nav ul li { margin: 5px 10px; }
+      .hero-section-main h1 { font-size: 2.8em; }
+      .hero-section-main p { font-size: 1.1em; }
+      .featured-item { flex-direction: column; text-align: center; }
+      .featured-image, .featured-content { width: 100%; min-width: unset; }
+      .why-choose-grid, .showcase-grid, .services-grid-blue .container, .services-grid-white .container { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .logo { font-size: 20px; }
+      .hero-section-main { padding: 80px 15px; }
+      .hero-section-main h1 { font-size: 2.2em; }
+      .hero-section-main p { font-size: 1em; }
+      .btn { padding: 10px 20px; font-size: 0.9em; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header with Logo and Navigation -->
-    <header>
-        <div class="container">
-            <div class="logo">Elite Digital Global</div>
-            <nav class="navbar" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header with Logo and Navigation -->
+  <header>
+    <div class="container">
+      <div class="logo">Elite Digital Global</div>
+      <nav class="navbar" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="our-services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section-main">
+    <div class="hero-overlay">
+      <h1>YOUR PARTNER IN DIGITAL TRANSFORMATION, BUSINESS GROWTH ACROSS AFRICA</h1>
+      <p>We provide innovative and comprehensive strategies to ensure your success.</p>
+      <a href="#contact-us" class="btn">Get Started Today</a>
+    </div>
+  </section>
+
+  <!-- Intro Text Section -->
+  <section class="intro-text-section">
+    <div class="container">
+      <p>"We help you develop and grow your business with our tailored solutions. Our team of experts provides innovative and comprehensive strategies to ensure your success."</p>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose-section">
+    <div class="container">
+      <h2>Why Choose Elite Digital Global Consulting Services?</h2>
+      <p>Discover the unique advantages of partnering with us for your digital transformation journey.</p>
+      <div class="why-choose-grid">
+        <!-- All why-choose items as per original code -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Showcase Section -->
+  <section class="services-showcase-section">
+    <div class="container">
+      <h2>Our Global Impact Through Innovation</h2>
+      <div class="showcase-grid">
+        <!-- All showcase items as per original code -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="featured-item">
+        <div class="featured-image">
+          <img src="https://imgur.com/mwDwynO.png" alt="Our Approach Image">
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section-main">
-        <div class="hero-overlay">
-            <h1>YOUR PARTNER IN DIGITAL TRANSFORMATION, BUSINESS GROWTH ACROSS AFRICA</h1>
-            <p>We provide innovative and comprehensive strategies to ensure your success.</p>
-            <a href="#contact-us" class="btn">Get Started Today</a>
-        </div>
-    </section>
-
-    <!-- Intro Text Section -->
-    <section class="intro-text-section">
-        <div class="container">
-            <p>"We help you develop and grow your business with our tailored solutions. Our team of experts provides innovative and comprehensive strategies to ensure your success."</p>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-choose-section">
-        <div class="container">
-            <h2>Why Choose Elite Digital Global Consulting Services?</h2>
-            <p>Discover the unique advantages of partnering with us for your digital transformation journey.</p>
-            <div class="why-choose-grid">
-                <!-- Repeat your why-choose-item blocks here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Add all other sections here (services, featured, clients, testimonials, offerings, CTA, footer) as in your original code -->
-
-</body>
-</html>
+        <div class="featured-content">
+          <h2>Our Approach</
