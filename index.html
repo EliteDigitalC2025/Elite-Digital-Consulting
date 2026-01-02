@@ -1,1 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Digital Global Consulting Services - Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section (Main Banner) */
+        .hero-section-main {
+            /* Updated with the direct Imgur link */
+            background: url('https://i.imgur.com/D9IRzyX.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-section-main .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 20px;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        .hero-section-main h1 {
+            font-size: 3.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .hero-section-main p {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Intro Text Section */
+        .intro-text-section {
+            background-color: #e6f2ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro-text-section p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #0056b3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+
+        .why-choose-section h2 {
+            color: #0056b3;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .why-choose-section > p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .why-choose-item {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-choose-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        .why-choose-item img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .why-choose-item h3 {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .why-choose-item p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+
+        /* Services/Showcase Section (New Section) */
+        .services-showcase-section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .services-showcase-section h2 {
+            color: #0056b3;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .showcase-item {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .showcase-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .showcase-content h3 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .showcase-content p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+
+        /* Featured Section (Our Approach - existing) */
+        .featured-section {
+            padding: 60px 0;
+            background-color: #f8f8f8;
+        }
+
+        .featured-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .featured-image {
+                flex: 1;
+                min-width: 300px;
+                text-align: center;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .featured-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .featured-content h2 {
+            color: #0056b3;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .featured-content p {
+            margin-bottom: 20px;
+        }
+
+        .featured-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .featured-content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .featured-content ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 1;
+        }
+        .featured-content ul li strong {
+            color: #0056b3;
+        }
+
+
+        /* Buttons */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Service Grids (Blue and White) - Existing */
+        .services-grid-blue, .services-grid-white {
+            padding: 60px 0;
+        }
+
+        .services-grid-blue {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .services-grid-white {
+            background-color: #f8f8f8;
+        }
+
+        .services-grid-blue .container,
+        .services-grid-white .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .services-grid-white .service-item {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #eee;
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: inherit;
+        }
+
+        .service-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-item ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-item ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .services-grid-white .service-item ul li::before {
+            color: #007bff;
+        }
+
+
+        /* Extensive Offerings Section - Existing */
+        .extensive-offerings {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .extensive-offerings h2 {
+            color: #0056b3;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .offering-item {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .offering-item h3 {
+            color: #007bff;
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Clients We Serve Section (NEW) */
+        .clients-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+
+        .clients-section h2 {
+            color: #0056b3;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+
+        .client-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid for logos */
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client-logo-item img {
+            max-width: 100%;
+            height: 80px; /* Fixed height for consistent logo size */
+            object-fit: contain; /* Ensures logo fits without cropping */
+            filter: grayscale(100%); /* Optional: Make logos grayscale */
+            opacity: 0.7; /* Optional: Make logos slightly faded */
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        .client-logo-item img:hover {
+            filter: grayscale(0%); /* Color on hover */
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        /* Testimonials Section (NEW) */
+        .testimonials-section {
+            background-color: #0056b3; /* Darker blue background */
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            color: #fff; /* White heading */
+            font-size: 2.8em;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial-item {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white for items */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .testimonial-item p.quote {
+            font-size: 1.1em;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-item .client-info {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .testimonial-item .client-info strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .testimonial-item .client-info span {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Call to Action Section - Existing */
+        .cta-section {
+            background-color: #e6f2ff;
+            padding: 50px 20px;
+            text-align: center;
+            color: #0056b3;
+        }
+
+        .cta-section p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Footer Styling - Existing */
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 40px 0 20px;
+            font-size: 0.9em;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .hero-section-main h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-section-main p {
+                font-size: 1.1em;
+            }
+
+            .featured-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .featured-image, .featured-content {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .why-choose-grid,
+            .services-showcase-grid,
+            .client-logos-grid, /* Responsive for client logos */
+            .testimonial-grid,   /* Responsive for testimonials */
+            .services-grid-blue .container,
+            .services-grid-white .container,
+            .offerings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-col {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero-section-main {
+                padding: 80px 15px;
+            }
+
+            .hero-section-main h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-section-main p {
+                font-size: 1em;
+            }
+
+            .intro-text-section p, .cta-section p {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .service-item, .offering-item, .why-choose-item, .showcase-item {
+                padding: 20px;
+            }
+            .showcase-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <section class="hero-section-main">
+        <div class="hero-overlay">
+            <h1>YOUR PARTNER IN DIGITAL TRANSFORMATION, BUSINESS GROWTH ACROSS AFRICA</h1>
+            <p>We provide innovative and comprehensive strategies to ensure your success.</p>
+            <a href="#contact-us" class="btn">Get Started Today</a>
+        </div>
+    </section>
+
+    <section class="intro-text-section">
+        <div class="container">
+            <p>"We help you develop and grow your business with our tailored solutions. Our team of experts provides innovative and comprehensive strategies to ensure your success."</p>
+        </div>
+    </section>
+
+    <section class="why-choose-section">
+        <div class="container">
+            <h2>Why Choose Elite Digital Global Consulting Services?</h2>
+            <p>Discover the unique advantages of partnering with us for your digital transformation journey.</p>
+            <div class="why-choose-grid">
+                <div class="why-choose-item">
+                    <img src="https://imgur.com/GQWg6G5.png" alt="Proven Expertise Icon">
+                    <h3>Proven Expertise</h3>
+                    <p>Benefit from over a decade of industry experience and deep technical knowledge.</p>
+                </div>
+                <div class="why-choose-item">
+                    <img src="https://imgur.com/Vs189ha.png" alt="Client-Centric Approach Icon">
+                    <h3>Client-Centric Approach</h3>
+                    <p>Your goals are our priority. We tailor solutions to your specific brand and market needs.</p>
+                </div>
+                <div class="why-choose-item">
+                    <img src="https://imgur.com/PO6bWJD.png" alt="Global Readiness Icon">
+                    <h3>Global Readiness</h3>
+                    <p>We empower businesses for international operations, with support for diverse markets.</p>
+                </div>
+                 <div class="why-choose-item">
+                    <img src="https://imgur.com/YVimHPp.png" alt="End-to-End Solutions Icon">
+                    <h3>End-to-End Solutions</h3>
+                    <p>From concept to launch and beyond, we manage your project's full lifecycle for sustained success.</p>
+                </div>
+                <div class="why-choose-item">
+                    <img src="https://imgur.com/Cj8uBvT.png" alt="Data-Driven Strategies Icon">
+                    <h3>Data-Driven Strategies</h3>
+                    <p>Our campaigns are analytically driven to maximize your return on investment and achieve measurable results.</p>
+                </div>
+                <div class="why-choose-item">
+                    <img src="https://imgur.com/fdWjvqo.png" alt="Scalable Technology Icon">
+                    <h3>Scalable Technology</h3>
+                    <p>Solutions designed for growth, ensuring your digital infrastructure evolves with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-showcase-section">
+        <div class="container">
+            <h2>Our Global Impact Through Innovation</h2>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <img src="https://imgur.com/nkrDF1J.png" alt="Strategic Digital Campaigns">
+                    <div class="showcase-content">
+                        <h3>Strategic Digital Campaigns</h3>
+                        <p>Crafting targeted digital marketing strategies that deliver measurable results and boost your online presence.</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://imgur.com/YyNuoUa.png" alt="Custom Web Solutions">
+                    <div class="showcase-content">
+                        <h3>Custom Websites Solutions</h3>
+                        <p>Developing bespoke websites and e-commerce platforms tailored to your business needs and user experience.</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://imgur.com/8j6oHBc.png" alt="Efficient Project Management">
+                    <div class="showcase-content">
+                        <h3>Efficient Project Management</h3>
+                        <p>Ensuring timely and budget-friendly project delivery from planning to execution and quality assurance.</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://imgur.com/4Gxa000.png" alt="Business Process Optimization">
+                    <div class="showcase-content">
+                        <h3>Business Process Optimization</h3>
+                        <p>Consulting services to streamline your operations, improve efficiency, and drive sustainable growth.</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://imgur.com/nkrDF1J.png" alt="Innovative Cloud Deployments">
+                    <div class="showcase-content">
+                        <h3>Innovative Cloud Deployments</h3>
+                        <p>Expert cloud solutions for secure data storage, scalable infrastructure, and seamless migration.</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://imgur.com/svTJvlM.png" alt="Brand & UI/UX Design">
+                    <div class="showcase-content">
+                        <h3>Branding and UI/UX Design</h3>
+                        <p>Creating compelling brand identities and intuitive user interfaces for exceptional digital experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-item">
+                <div class="featured-image">
+                    <img src="https://imgur.com/mwDwynO.png" alt="Our Approach Image">
+                </div>
+                <div class="featured-content">
+                    <h2>Our Approach</h2>
+                    <p>Elite Tech Consulting’s Approach: “From concept to launch and beyond; your digital success partner.”</p>
+                    <ul>
+                        <li><strong>Client-Centric Strategy:</strong> Every project begins with understanding the client's brand, market goals, and pain points to deliver tailored solutions.</li>
+                        <li><strong>End-to-End Execution:</strong> We manage the full lifecycle — from idea conceptualization to post-launch support and performance audits.</li>
+                        <li><strong>Data-Driven Marketing:</strong> Our digital campaigns are based on targeted, analytical strategies to maximize ROI.</li>
+                        <li><strong>Scalable Tech Solutions:</strong> Services are designed with growth and scalability in mind, ensuring long-term business impact.</li>
+                    </ul>
+                    <a href="#learn-more" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-section">
+        <div class="container">
+            <h2>Clients We Serve</h2>
+            <p>We partner with diverse businesses across various sectors, delivering tailored digital solutions.</p>
+            <div class="client-logos-grid">
+               <div class="client-logo-item"><img src="https://i.imgur.com/D3Oxslv.png" alt="Client Logo A"></div>
+<div class="client-logo-item"><img src="https://i.imgur.com/A1ULnEy.png" alt="Client Logo B"></div>
+<div class="client-logo-item"><img src="https://i.imgur.com/5GM18GR.png" alt="Client Logo C"></div>
+<div class="client-logo-item"><img src="https://imgur.com/LCGVuZR.png" alt="Client Logo D"></div>
+<div class="client-logo-item"><img src="https://imgur.com/AaFzS8p.png" alt="Client Logo E"></div>
+<div class="client-logo-item"><img src="https://imgur.com/VeGJTLW.png" alt="Client Logo F"></div>
+</div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say About Us</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <p class="quote">"Elite Digital Global Consulting transformed our online presence. Their strategic insights and execution were exceptional, leading to significant growth in our customer engagement."</p>
+                    <div class="client-info">
+                        <strong>Sarah M.</strong>
+                        <span>CEO, Tech Innovations Ltd.</span>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="quote">"The team at Elite Digital provided unparalleled support in our business launch. Their expertise in compliance and branding was invaluable. Highly recommended!"</p>
+                    <div class="client-info">
+                        <strong>Dr. Emeka O.</strong>
+                        <span>Founder, Healthcare Solutions Inc.</span>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="quote">"Their project management skills are top-notch. Our complex e-commerce platform was delivered on time and within budget, exceeding all our expectations."</p>
+                    <div class="client-info">
+                        <strong>Kwame B.</strong>
+                        <span>Operations Manager, Retail Africa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="extensive-offerings">
+        <div class="container">
+            <h2>Our Extensive Service Offerings</h2>
+            <div class="offerings-grid">
+                <div class="offering-item">
+                    <h3>Tech Project Rollouts</h3>
+                    <p>MVP development, project execution, sprint planning, post-launch support, and end-to-end deployment.</p>
+                    <a href="#tech-details" class="btn">View Details</a>
+                </div>
+                <div class="offering-item">
+                    <h3>Business Launch Support</h3>
+                    <p>CAC (Nigeria) registration, incorporation, compliance, branding packages, and documentation.</p>
+                    <a href="#business-details" class="btn">View Details</a>
+                </div>
+                <div class="offering-item">
+                    <h3>E-commerce Management</h3>
+                    <p>Product listing, integration, inventory solutions, storefront design, and strategy.</p>
+                    <a href="#ecommerce-details" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="services-grid-blue">
+        <div class="container">
+            <div class="service-item">
+                <h3>Digital Marketing Strategy</h3>
+                <ul>
+                    <li>SEO Optimization</li>
+                    <li>Content Marketing</li>
+                    <li>Social Media Campaigns</li>
+                    <li>Email Marketing</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Website Development</h3>
+                <ul>
+                    <li>Custom Web Design</li>
+                    <li>E-commerce Solutions</li>
+                    <li>CMS/ Website Development</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Project Management</h3>
+                <ul>
+                    <li>Project Planning</li>
+                    <li>Risk Management</li>
+                    <li>Resource Allocation</li>
+                    <li>Quality Assurance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-grid-white">
+        <div class="container">
+            <div class="service-item">
+                <h3>Consulting Services</h3>
+                <ul>
+                    <li>Business Analysis</li>
+                    <li>Strategy Consulting</li>
+                    <li>IT Consulting</li>
+                    <li>Process Improvement</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li>Logo Design</li>
+                    <li>Branding</li>
+                    <li>Brochures & Flyers</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Solutions</h3>
+                <ul>
+                    <li>Cloud Migration</li>
+                    <li>Cloud Infrastructure</li>
+                    <li>Data Storage</li>
+                    <li>Security Solutions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <p>Elite Tech Consulting offers a comprehensive suite of digital services focused on website development, project lifecycle management, tech rollouts, and business launch support. Our services cater to businesses looking to optimize digital performance, launch new ventures, or expand their market reach. Ready to get Started?</p>
+            <a href="#contact-us" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Elite Digital Global Consulting Services</h3>
+                    <p>Your partner for global digital transformation strategies & excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Terms</h3>
+                    <ul>
+                        <li><a href="index.html">Privacy Policy</a></li>
+                        <li><a href="about.html">Conditions</a></li>
+                        <li><a href="our-services.html">FAQ</a></li>
+                        <li><a href="portfolio.html">Refund Policy</a></li>
+                        <li><a href="contact.html">Elite Travel</a></li>
+<li><a href="contact.html">Get A Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Adebola House (Suite 100, Rear Wing) 38 Opebi road, Ikeja,100281<br>Lagos, Nigeria</p>
+                    <p>Email: info@elitedigitalglobalconsulting.com</p>
+                    <p>Phone: +4915219231584</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elite_digital_global/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@elite_digital_global" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.twitter.com/@elite_digital_global" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/elite_digital_global/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Elite Digital Global Consulting Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
