@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Digital Global Consulting Services - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styling (Copied from your existing CSS) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styling (Copied from your existing CSS) */
+        header {
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section for About Page */
+        .about-hero-section {
+            /* Replace with an appropriate banner image for About Us, or reuse one */
+            background: url('https://i.imgur.com/D9IRzyX.jpg') no-repeat center center/cover; /* Reusing your homepage banner image for consistency */
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            min-height: 500px; /* Consistent height with other large banners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-hero-section .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 20px;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        .about-hero-section h1 {
+            font-size: 3.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .about-hero-section p {
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+
+        /* Intro Text Section (Copied from existing, potentially for overall company intro) */
+        .intro-text-section {
+            background-color: #e6f2ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro-text-section p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #0056b3;
+            max-width: 800px; /* Added max-width for better readability */
+            margin: 0 auto;
+        }
+
+        /* Featured Sections (Adapted for About Us story/vision) */
+        .featured-section {
+            padding: 60px 0;
+            background-color: #fff; /* White background for contrast */
+        }
+
+        .featured-section.bg-light { /* Optional: for alternating background colors */
+            background-color: #f8f8f8;
+        }
+
+        .featured-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center; /* Center items vertically */
+            gap: 40px;
+            margin-bottom: 60px; /* Space between featured items */
+        }
+
+        .featured-item:last-child {
+            margin-bottom: 0; /* No margin after the last one */
+        }
+
+        .featured-item.reverse {
+            flex-direction: row-reverse; /* Swap order for image/text on alternate sections */
+        }
+
+        .featured-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .featured-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .featured-content h2 {
+            color: #0056b3;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .featured-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Team / Gallery Section */
+        .team-section {
+            padding: 60px 0;
+            background-color: #e6f2ff; /* Light blue background for this section */
+            text-align: center;
+        }
+
+        .team-section h2 {
+            color: #0056b3;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for team members */
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        }
+
+        .team-member img {
+            width: 150px; /* Fixed width for consistent team photos */
+            height: 150px; /* Fixed height */
+            border-radius: 50%; /* Circular images */
+            object-fit: cover; /* Crop to fit circle */
+            margin-bottom: 15px;
+            border: 3px solid #007bff; /* Small border for effect */
+        }
+
+        .team-member h3 {
+            color: #0056b3;
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .team-member p.role {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        .team-member p.bio {
+            font-size: 0.9em;
+            color: #444;
+        }
+
+
+        /* Buttons (Common Styling - copied again for completeness) */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Call to Action Section (Common Styling) */
+        .cta-section {
+            background-color: #e6f2ff;
+            padding: 50px 20px;
+            text-align: center;
+            color: #0056b3;
+        }
+
+        .cta-section p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Footer Styling (Common Styling) */
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 40px 0 20px;
+            font-size: 0.9em;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Responsive Design (Common Media Queries) */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .about-hero-section h1 {
+                font-size: 2.8em;
+            }
+
+            .about-hero-section p {
+                font-size: 1.1em;
+            }
+
+            .featured-item {
+                flex-direction: column; /* Stack image and content on small screens */
+                text-align: center;
+            }
+
+            .featured-item.reverse {
+                flex-direction: column; /* Also stack reversed items */
+            }
+
+            .featured-image, .featured-content {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr; /* Single column for team members on small screens */
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-col {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .about-hero-section {
+                padding: 80px 15px;
+            }
+
+            .about-hero-section h1 {
+                font-size: 2.2em;
+            }
+
+            .about-hero-section p {
+                font-size: 1em;
+            }
+
+            .intro-text-section p, .cta-section p {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .team-member {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <section class="about-hero-section">
+        <div class="hero-overlay">
+            <h1>ABOUT ELITE DIGITAL GLOBAL CONSULTING SERVICES</h1>
+            <p>Your Trusted Partner in Digital Transformation and Business Growth.</p>
+        </div>
+    </section>
+
+    <section class="intro-text-section">
+        <div class="container">
+            <p>"At Elite Digital Global Consulting Services, we are more than just consultants; we are architects of digital success. With a passion for innovation and a decade of expertise, we empower businesses across Africa to thrive in the digital age."</p>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-item">
+                <div class="featured-image">
+                    <img src="https://via.placeholder.com/600x400/ADD8E6/000080?text=Our+Story" alt="Our Story Image">
+                </div>
+                <div class="featured-content">
+                    <h2>Our Story & Mission</h2>
+                    <p>Founded with a vision to bridge the digital divide in Africa, Elite Digital Global Consulting Services began its journey over 10 years ago. We recognized the immense potential for growth and transformation that technology offered, and we committed ourselves to guiding businesses through this evolving landscape.</p>
+                    <p>Our mission is to provide innovative, tailored, and comprehensive digital solutions that drive measurable success, foster sustainable growth, and enable our clients to achieve their full potential.</p>
+                </div>
+            </div>
+
+            <div class="featured-item reverse bg-light">
+                <div class="featured-image">
+                    <img src="https://via.placeholder.com/600x400/B0E0E6/000080?text=Our+Vision" alt="Our Vision Image">
+                </div>
+                <div class="featured-content">
+                    <h2>Our Vision & Values</h2>
+                    <p>We envision a future where every African business, regardless of size, can harness the power of digital innovation to compete globally. We strive to be the leading digital consulting firm in Africa, known for our strategic insight, technical excellence, and unwavering commitment to client success.</p>
+                    <ul>
+                        <li><strong>Innovation:</strong> Continuously seeking new and better ways to solve complex challenges.</li>
+                        <li><strong>Client-Centricity:</strong> Placing our clients' needs and success at the forefront of everything we do.</li>
+                        <li><strong>Integrity:</strong> Operating with transparency, honesty, and the highest ethical standards.</li>
+                        <li><strong>Excellence:</strong> Delivering superior quality in every project and interaction.</li>
+                        <li><strong>Empowerment:</strong> Equipping our clients with the knowledge and tools to sustain their digital growth.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Expert Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Jane+Doe" alt="Jane Doe">
+                    <h3>Jane Doe</h3>
+                    <p class="role">Chief Executive Officer</p>
+                    <p class="bio">With 15+ years in tech leadership, Jane steers our vision and ensures operational excellence.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=John+Smith" alt="John Smith">
+                    <h3>John Smith</h3>
+                    <p class="role">Head of Digital Strategy</p>
+                    <p class="bio">John's expertise in market analysis drives our impactful digital marketing campaigns.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Alice+Brown" alt="Alice Brown">
+                    <h3>Alice Brown</h3>
+                    <p class="role">Lead Web Developer</p>
+                    <p class="bio">Alice brings creative and technical prowess to every website and e-commerce solution.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Robert+Green" alt="Robert Green">
+                    <h3>Robert Green</h3>
+                    <p class="role">Senior IT Consultant</p>
+                    <p class="bio">Robert specializes in cloud solutions and IT infrastructure, ensuring robust systems.</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="container">
+            <p>Ready to embark on your digital transformation journey with Elite Digital Global Consulting Services?</p>
+            <a href="contact.html" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Elite Digital Global Consulting Services</h3>
+                    <p>Your partner in digital transformation.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li> <li><a href="our-services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Adebola House (Suite 100, Rear Wing) 38 Opebi road, Ikeja,100281<br>Lagos, Nigeria</p>
+                    <p>Email: info@elitedigitalglobalconsulting.com</p>
+                    <p>Phone: +4915219231584</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 Elite Digital Global Consulting Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
