@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+    <header>
+    <div class="container">
+        <div class="logo">Elite Digital Global</div>
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="our-services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <style>
+        /* General Body and Container Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section (Specific to Services page) */
+        .hero-section {
+            /* Image URL already correct from previous fix */
+            background: url('https://i.imgur.com/PdH2VbH.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px; /* Adjusted padding */
+            position: relative;
+            min-height: 500px; /* INCREASED MIN-HEIGHT for larger banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 20px;
+            border-radius: 8px;
+            max-width: 800px; /* Add max-width for overlay text readability on wide screens */
+        }
+
+        .hero-section h1 {
+            font-size: 3.8em; /* Slightly larger text */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .hero-section p {
+            font-size: 1.4em; /* Slightly larger text */
+            margin-top: 0;
+        }
+
+        /* Intro Text Section */
+        .intro-text-section {
+            background-color: #e6f2ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro-text-section p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #0056b3;
+        }
+
+        /* Featured Section (Two Columns - Our Approach) */
+        .featured-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .featured-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .featured-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .featured-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .featured-content h2 {
+            color: #0056b3;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .featured-content p {
+            margin-bottom: 20px;
+        }
+
+        .featured-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .featured-content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .featured-content ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 1;
+        }
+        .featured-content ul li strong {
+            color: #0056b3;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Service Grids (Blue and White) */
+        .services-grid-blue, .services-grid-white {
+            padding: 60px 0;
+        }
+
+        .services-grid-blue {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .services-grid-white {
+            background-color: #f8f8f8;
+        }
+
+        .services-grid-blue .container,
+        .services-grid-white .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .services-grid-white .service-item {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #eee;
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: inherit;
+        }
+
+        .service-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-item ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-item ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .services-grid-white .service-item ul li::before {
+            color: #007bff;
+        }
+
+        /* Extensive Offerings Section */
+        .extensive-offerings {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .extensive-offerings h2 {
+            color: #0056b3;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .offering-item {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .offering-item h3 {
+            color: #007bff;
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            background-color: #e6f2ff;
+            padding: 50px 20px;
+            text-align: center;
+            color: #0056b3;
+        }
+
+        .cta-section p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 40px 0 20px;
+            font-size: 0.9em;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-section p {
+                font-size: 1em;
+            }
+
+            .featured-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .featured-image, .featured-content {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .services-grid-blue .container,
+            .services-grid-white .container,
+            .offerings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-col {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero-section {
+                padding: 80px 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 2em;
+            }
+
+            .intro-text-section p, .cta-section p {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .service-item, .offering-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1>OUR SERVICES</h1>
+            <p>WEBSITE DESIGN DEVELOPMENT & PROJECT LIFECYCLE MAINTENANCE</p>
+        </div>
+    </section>
+
+    <section class="intro-text-section">
+        <div class="container">
+            <p>"We help you develop and grow your business with our tailored solutions. Our team of experts provides innovative and comprehensive strategies to ensure your success."</p>
+        </div>
+    </section>
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-item">
+                <div class="featured-image">
+                    <img src="https://i.imgur.com/LjVrHxp.jpg" alt="Our Approach Image">
+                </div>
+                <div class="featured-content">
+                    <h2>Our Approach</h2>
+                    <p>Elite Tech Consulting’s Approach: “From concept to launch and beyond - your digital success partner.”</p>
+                    <ul>
+                        <li><strong>Client-Centric Strategy:</strong> Every project begins with understanding the client's brand, market goals, and pain points to deliver tailored solutions.</li>
+                        <li><strong>End-to-End Execution:</strong> We manage the full lifecycle, from idea conceptualization to post-launch support and performance audits.</li>
+                        <li><strong>Data-Driven Marketing:</strong> Our digital campaigns are based on targeted, analytical strategies to maximize ROI.</li>
+                        <li><strong>Scalable Tech Solutions:</strong> Services are designed with growth and scalability in mind, ensuring long-term business impact.</li>
+                    </ul>
+                    <a href="#learn-more" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-grid-blue">
+        <div class="container">
+            <div class="service-item">
+                <h3>Digital Marketing Strategy</h3>
+                <ul>
+                    <li>SEO Optimization</li>
+                    <li>Content Marketing</li>
+                    <li>Social Media Campaigns</li>
+                    <li>Email Marketing</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Website Development</h3>
+                <ul>
+                    <li>Custom Web Design</li>
+                    <li>E-commerce Solutions</li>
+                    <li>CMS/ Website Development</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Project Management</h3>
+                <ul>
+                    <li>Project Planning</li>
+                    <li>Risk Management</li>
+                    <li>Resource Allocation</li>
+                    <li>Quality Assurance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-grid-white">
+        <div class="container">
+            <div class="service-item">
+                <h3>Consulting Services</h3>
+                <ul>
+                    <li>Business Analysis</li>
+                    <li>Strategy Consulting</li>
+                    <li>IT Consulting</li>
+                    <li>Process Improvement</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li>Logo Design</li>
+                    <li>Branding</li>
+                    <li>Brochures & Flyers</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Cloud Solutions</h3>
+                <ul>
+                    <li>Cloud Migration</li>
+                    <li>Cloud Infrastructure</li>
+                    <li>Data Storage</li>
+                    <li>Security Solutions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="extensive-offerings">
+        <div class="container">
+            <h2>OUR EXTENSIVE SERVICE OFFERINGS</h2>
+            <div class="offerings-grid">
+                <div class="offering-item">
+                    <h3>Tech Project Rollouts</h3>
+                    <p>MVP development, project execution, sprint planning, post-launch support, and end-to-end deployment.</p>
+                    <a href="#tech-details" class="btn">View Details</a>
+                </div>
+                <div class="offering-item">
+                    <h3>Business Launch Support</h3>
+                    <p>CAC (Nigeria) registration, incorporation, compliance, branding packages, and documentation.</p>
+                    <a href="#business-details" class="btn">View Details</a>
+                </div>
+                <div class="offering-item">
+                    <h3>E-commerce Product Management</h3>
+                    <p>Product listing, integration, inventory solutions, storefront design, and strategy.</p>
+                    <a href="#ecommerce-details" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <p>Elite Tech Consulting offers a comprehensive suite of digital services focused on website development, project lifecycle management, tech rollouts, and business launch support. Our services cater to businesses looking to optimize digital performance, launch new ventures, or expand their market reach. Ready to get Started?</p>
+            <a href="#contact-us" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Elite Digital Global Consulting Services</h3>
+                    <p>Your partner in digital transformation.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Adebola House (Suite 100, Rear Wing) 38 Opebi road, Ikeja,100281<br>Lagos, Nigeria</p>
+                    <p>Email: info@elitedigitalglobalconsulting.com</p>
+                    <p>Phone: +4915219231584</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Elite Digital Global Consulting Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
