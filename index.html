@@ -1,27 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Global Consulting Services - Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-    <header>
-    <div class="container">
-        <div class="logo">Elite Digital Global</div>
-        <nav class="navbar" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="our-services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Digital Consulting | Enterprise Technology, Software &amp; AI Solutions</title>
+<meta content="Elite Digital Consulting delivers enterprise software engineering, web platforms, DevOps, AI solutions and Agile technical project leadership for businesses worldwide." name="description"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
         /* General Body and Container Styling */
         body {
             font-family: Arial, sans-serif;
@@ -82,7 +69,7 @@
         /* Hero Section (Main Banner) */
         .hero-section-main {
             /* Updated with the direct Imgur link */
-            background: url('https://i.imgur.com/D9IRzyX.jpg') no-repeat center center/cover;
+            background: linear-gradient(90deg,rgba(0,20,45,.36),rgba(0,45,95,.12)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 120px 20px;
@@ -437,7 +424,7 @@
             margin-bottom: 15px;
         }
 
-        /* Clients We Serve Section (NEW) */
+        /* International Experience That Informs Our Work Section (NEW) */
         .clients-section {
             padding: 60px 0;
             text-align: center;
@@ -471,6 +458,15 @@
             filter: grayscale(0%); /* Color on hover */
             opacity: 1; /* Full opacity on hover */
         }
+
+
+        /* Smooth, continuously moving brand showcase; existing site colors preserved */
+        .client-marquee { overflow:hidden; width:100%; margin-top:35px; }
+        .client-marquee-track { display:flex; width:max-content; animation:client-scroll 55s linear infinite; }
+        .client-marquee-group { display:flex; flex:none; gap:20px; padding-right:20px; align-items:stretch; }
+        .client-marquee:hover .client-marquee-track, .client-marquee:focus-within .client-marquee-track { animation-play-state:paused; }
+        @keyframes client-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+        @media (prefers-reduced-motion:reduce) { .client-marquee-track { animation:none; } .client-marquee { overflow-x:auto; } }
 
         /* Testimonials Section (NEW) */
         .testimonials-section {
@@ -613,7 +609,7 @@
             margin-top: 20px;
         }
 
-        /* Responsive Design */
+        /* Responsive, Accessible Interfaces */
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
@@ -701,328 +697,398 @@
                 padding: 15px;
             }
         }
-    </style>
+    /* Photo crops preserve the existing card sizes and layout. */
+.why-choose-item img,.showcase-item img{width:100%;object-fit:cover;display:block}
+.featured-image img{width:100%;height:360px;max-height:none;object-fit:cover;object-position:center;border-radius:8px}@media(max-width:768px){.featured-image img{height:280px}}
+
+/* Consistent card geometry and CTA alignment without changing the existing design */
+.why-choose-grid,.showcase-grid,.offerings-grid,.testimonial-grid{align-items:stretch;}
+.why-choose-item,.showcase-item,.offering-item,.testimonial-item{height:100%;box-sizing:border-box;}
+.why-choose-item,.offering-item,.testimonial-item{display:flex;flex-direction:column;}
+.showcase-item{display:flex;flex-direction:column;}
+.showcase-content{display:flex;flex:1;flex-direction:column;}
+.why-choose-item p,.showcase-content p{flex-grow:1;}
+.offering-item p{flex:1;}
+.offering-item .btn{align-self:center;margin-top:auto;}
+.testimonial-item .client-info{margin-top:auto;}
+/* Reserve matching heading space where titles wrap onto different lines */
+.why-choose-item h3,.showcase-content h3,.offering-item h3{min-height:2.5em;}
+@media(max-width:768px){.why-choose-item h3,.showcase-content h3,.offering-item h3{min-height:0;}}
+
+/* Precision alignment: the quote, divider, title and subtitle share identical baselines. */
+.testimonial-grid{align-items:stretch;}
+.testimonial-item{display:grid!important;grid-template-rows:minmax(150px,1fr) auto!important;align-content:stretch;min-width:0;}
+.testimonial-item p.quote{display:flex;align-items:center;justify-content:center;margin:0!important;padding:0 0 18px;min-height:0;}
+.testimonial-item .client-info{margin:0!important;padding-top:18px;display:grid;grid-template-rows:minmax(3.1em,auto) minmax(2.8em,auto);align-items:center;}
+.testimonial-item .client-info strong{display:flex;align-items:center;justify-content:center;margin:0!important;line-height:1.4;}
+.testimonial-item .client-info span{display:flex;align-items:center;justify-content:center;line-height:1.5;}
+@media(max-width:768px){.testimonial-item{grid-template-rows:auto auto!important;}.testimonial-item p.quote{min-height:100px;}}
+
+/* 2026 homepage polish: consistent cards, typography and CTA dimensions */
+*,*::before,*::after{box-sizing:border-box}
+.why-choose-grid,.showcase-grid,.offerings-grid,.testimonial-grid,
+.services-grid-blue .container,.services-grid-white .container{align-items:stretch}
+.why-choose-item,.showcase-item,.offering-item,.testimonial-item,.service-item{min-width:0;height:100%}
+.why-choose-item,.showcase-item,.offering-item,.service-item{display:flex;flex-direction:column}
+.why-choose-item img{flex:none;width:100%;height:180px;object-fit:cover}
+.showcase-item img{flex:none;width:100%;height:220px;object-fit:cover}
+.why-choose-item h3,.showcase-content h3,.offering-item h3{line-height:1.3}
+.why-choose-item h3{min-height:2.6em;display:flex;align-items:center;justify-content:center}
+.showcase-content h3{min-height:2.6em;display:flex;align-items:center}
+.offering-item h3{min-height:3.9em;display:flex;align-items:center;justify-content:center}
+.why-choose-item p,.showcase-content p,.offering-item p{margin-top:0;flex:1}
+.showcase-content{flex:1;display:flex;flex-direction:column}
+.offering-item .btn{margin-top:auto}
+/* Uniform action widths/heights throughout the homepage */
+a.btn{width:260px;max-width:100%;min-height:52px;padding:12px 18px;
+ display:inline-flex;align-items:center;justify-content:center;text-align:center;
+ vertical-align:middle;line-height:1.35;font-size:1rem;font-weight:600;
+ white-space:normal;box-sizing:border-box}
+.hero-overlay .btn,.featured-content .btn{margin-top:20px}
+.offering-item .btn{align-self:center}
+.homepage-cta-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:14px}
+.homepage-cta-actions .btn{margin-top:0}
+.testimonial-item{display:grid!important;grid-template-rows:minmax(160px,1fr) auto!important}
+.testimonial-item .client-info{margin:0!important;display:grid;grid-template-rows:minmax(3.2em,auto) minmax(2.8em,auto)}
+.service-item h3{min-height:2.6em;line-height:1.3}
+.service-item ul{margin-top:0}
+@media(max-width:768px){
+ .why-choose-item h3,.showcase-content h3,.offering-item h3,.service-item h3{min-height:0}
+ .testimonial-item{grid-template-rows:auto auto!important}
+ .testimonial-item p.quote{min-height:110px}
+ .showcase-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+ a.btn{width:100%;max-width:320px;min-height:52px;padding:12px 16px;font-size:1rem}
+ .homepage-cta-actions{flex-direction:column;align-items:center}
+ .why-choose-item,.offering-item{padding:20px}
+ .showcase-item{padding:0}
+ .showcase-content{padding:20px}
+}
+</style>
 </head>
 <body>
-
-
-    <section class="hero-section-main">
-        <div class="hero-overlay">
-            <h1>YOUR PARTNER IN DIGITAL TRANSFORMATION, BUSINESS GROWTH ACROSS AFRICA</h1>
-            <p>We provide innovative and comprehensive strategies to ensure your success.</p>
-            <a href="#contact" class="btn">Get Started Today</a>
-        </div>
-    </section>
-
-    <section class="intro-text-section">
-        <div class="container">
-            <p>"We help you develop and grow your business with our tailored solutions. Our team of experts provides innovative and comprehensive strategies to ensure your success."</p>
-        </div>
-    </section>
-
-    <section class="why-choose-section">
-        <div class="container">
-            <h2>Why Choose Elite Digital Global Consulting Services?</h2>
-            <p>Discover the unique advantages of partnering with us for your digital transformation journey.</p>
-            <div class="why-choose-grid">
-                <div class="why-choose-item">
-                    <img src="https://imgur.com/GQWg6G5.png" alt="Proven Expertise Icon">
-                    <h3>Proven Expertise</h3>
-                    <p>Benefit from over a decade of industry experience and deep technical knowledge.</p>
-                </div>
-                <div class="why-choose-item">
-                    <img src="https://imgur.com/Vs189ha.png" alt="Client-Centric Approach Icon">
-                    <h3>Client-Centric Approach</h3>
-                    <p>Your goals are our priority. We tailor solutions to your specific brand and market needs.</p>
-                </div>
-                <div class="why-choose-item">
-                    <img src="https://imgur.com/PO6bWJD.png" alt="Global Readiness Icon">
-                    <h3>Global Readiness</h3>
-                    <p>We empower businesses for international operations, with support for diverse markets.</p>
-                </div>
-                 <div class="why-choose-item">
-                    <img src="https://imgur.com/YVimHPp.png" alt="End-to-End Solutions Icon">
-                    <h3>End-to-End Solutions</h3>
-                    <p>From concept to launch and beyond, we manage your project's full lifecycle for sustained success.</p>
-                </div>
-                <div class="why-choose-item">
-                    <img src="https://imgur.com/Cj8uBvT.png" alt="Data-Driven Strategies Icon">
-                    <h3>Data-Driven Strategies</h3>
-                    <p>Our campaigns are analytically driven to maximize your return on investment and achieve measurable results.</p>
-                </div>
-                <div class="why-choose-item">
-                    <img src="https://imgur.com/fdWjvqo.png" alt="Scalable Technology Icon">
-                    <h3>Scalable Technology</h3>
-                    <p>Solutions designed for growth, ensuring your digital infrastructure evolves with your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-showcase-section">
-        <div class="container">
-            <h2>Our Global Impact Through Innovation</h2>
-            <div class="showcase-grid">
-                <div class="showcase-item">
-                    <img src="https://imgur.com/nkrDF1J.png" alt="Strategic Digital Campaigns">
-                    <div class="showcase-content">
-                        <h3>Strategic Digital Campaigns</h3>
-                        <p>Crafting targeted digital marketing strategies that deliver measurable results and boost your online presence.</p>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <img src="https://imgur.com/YyNuoUa.png" alt="Custom Web Solutions">
-                    <div class="showcase-content">
-                        <h3>Custom Websites Solutions</h3>
-                        <p>Developing bespoke websites and e-commerce platforms tailored to your business needs and user experience.</p>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <img src="https://imgur.com/8j6oHBc.png" alt="Efficient Project Management">
-                    <div class="showcase-content">
-                        <h3>Efficient Project Management</h3>
-                        <p>Ensuring timely and budget-friendly project delivery from planning to execution and quality assurance.</p>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <img src="https://imgur.com/4Gxa000.png" alt="Business Process Optimization">
-                    <div class="showcase-content">
-                        <h3>Business Process Optimization</h3>
-                        <p>Consulting services to streamline your operations, improve efficiency, and drive sustainable growth.</p>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <img src="https://imgur.com/nkrDF1J.png" alt="Innovative Cloud Deployments">
-                    <div class="showcase-content">
-                        <h3>Innovative Cloud Deployments</h3>
-                        <p>Expert cloud solutions for secure data storage, scalable infrastructure, and seamless migration.</p>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <img src="https://imgur.com/svTJvlM.png" alt="Brand & UI/UX Design">
-                    <div class="showcase-content">
-                        <h3>Branding and UI/UX Design</h3>
-                        <p>Creating compelling brand identities and intuitive user interfaces for exceptional digital experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="featured-section">
-        <div class="container">
-            <div class="featured-item">
-                <div class="featured-image">
-                    <img src="https://imgur.com/mwDwynO.png" alt="Our Approach Image">
-                </div>
-                <div class="featured-content">
-                    <h2>Our Approach</h2>
-                    <p>Elite Tech Consulting’s Approach: “From concept to launch and beyond; your digital success partner.”</p>
-                    <ul>
-                        <li><strong>Client-Centric Strategy:</strong> Every project begins with understanding the client's brand, market goals, and pain points to deliver tailored solutions.</li>
-                        <li><strong>End-to-End Execution:</strong> We manage the full lifecycle — from idea conceptualization to post-launch support and performance audits.</li>
-                        <li><strong>Data-Driven Marketing:</strong> Our digital campaigns are based on targeted, analytical strategies to maximize ROI.</li>
-                        <li><strong>Scalable Tech Solutions:</strong> Services are designed with growth and scalability in mind, ensuring long-term business impact.</li>
-                    </ul>
-                    <a href="#learn-more" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-            </div>
-        </div>
-    </section>
-
-    <section class="clients-section">
-        <div class="container">
-            <h2>Clients We Serve</h2>
-            <p>We partner with diverse businesses across various sectors, delivering tailored digital solutions.</p>
-            <div class="client-logos-grid">
-               <div class="client-logo-item"><img src="https://i.imgur.com/D3Oxslv.png" alt="Client Logo A"></div>
-<div class="client-logo-item"><img src="https://i.imgur.com/A1ULnEy.png" alt="Client Logo B"></div>
-<div class="client-logo-item"><img src="https://i.imgur.com/5GM18GR.png" alt="Client Logo C"></div>
-<div class="client-logo-item"><img src="https://imgur.com/LCGVuZR.png" alt="Client Logo D"></div>
-<div class="client-logo-item"><img src="https://imgur.com/AaFzS8p.png" alt="Client Logo E"></div>
-<div class="client-logo-item"><img src="https://imgur.com/VeGJTLW.png" alt="Client Logo F"></div>
+<header>
+<div class="container">
+<div class="logo">Elite Digital Consulting</div>
+<nav aria-label="Main Navigation" class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="our-services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
 </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="container">
-            <h2>What Our Clients Say About Us</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item">
-                    <p class="quote">"Elite Digital Global Consulting transformed our online presence. Their strategic insights and execution were exceptional, leading to significant growth in our customer engagement."</p>
-                    <div class="client-info">
-                        <strong>Sarah M.</strong>
-                        <span>CEO, Tech Innovations Ltd.</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p class="quote">"The team at Elite Digital provided unparalleled support in our business launch. Their expertise in compliance and branding was invaluable. Highly recommended!"</p>
-                    <div class="client-info">
-                        <strong>Dr. Emeka O.</strong>
-                        <span>Founder, Healthcare Solutions Inc.</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p class="quote">"Their project management skills are top-notch. Our complex e-commerce platform was delivered on time and within budget, exceeding all our expectations."</p>
-                    <div class="client-info">
-                        <strong>Kwame B.</strong>
-                        <span>Operations Manager, Retail Africa</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <section class="extensive-offerings">
-        <div class="container">
-            <h2>Our Extensive Service Offerings</h2>
-            <div class="offerings-grid">
-                <div class="offering-item">
-                    <h3>Tech Project Rollouts</h3>
-                    <p>MVP development, project execution, sprint planning, post-launch support, and end-to-end deployment.</p>
-                    <a href="#tech-details" class="btn">View Details</a>
-                </div>
-                <div class="offering-item">
-                    <h3>Business Launch Support</h3>
-                    <p>CAC (Nigeria) registration, incorporation, compliance, branding packages, and documentation.</p>
-                    <a href="#business-details" class="btn">View Details</a>
-                </div>
-                <div class="offering-item">
-                    <h3>E-commerce Management</h3>
-                    <p>Product listing, integration, inventory solutions, storefront design, and strategy.</p>
-                    <a href="#ecommerce-details" class="btn">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-     <section class="services-grid-blue">
-        <div class="container">
-            <div class="service-item">
-                <h3>Digital Marketing Strategy</h3>
-                <ul>
-                    <li>SEO Optimization</li>
-                    <li>Content Marketing</li>
-                    <li>Social Media Campaigns</li>
-                    <li>Email Marketing</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Website Development</h3>
-                <ul>
-                    <li>Custom Web Design</li>
-                    <li>E-commerce Solutions</li>
-                    <li>CMS/ Website Development</li>
-                    <li>Responsive Design</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Project Management</h3>
-                <ul>
-                    <li>Project Planning</li>
-                    <li>Risk Management</li>
-                    <li>Resource Allocation</li>
-                    <li>Quality Assurance</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-grid-white">
-        <div class="container">
-            <div class="service-item">
-                <h3>Consulting Services</h3>
-                <ul>
-                    <li>Business Analysis</li>
-                    <li>Strategy Consulting</li>
-                    <li>IT Consulting</li>
-                    <li>Process Improvement</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Graphic Design</h3>
-                <ul>
-                    <li>Logo Design</li>
-                    <li>Branding</li>
-                    <li>Brochures & Flyers</li>
-                    <li>UI/UX Design</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <h3>Cloud Solutions</h3>
-                <ul>
-                    <li>Cloud Migration</li>
-                    <li>Cloud Infrastructure</li>
-                    <li>Data Storage</li>
-                    <li>Security Solutions</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <p>Elite Tech Consulting offers a comprehensive suite of digital services focused on website development, project lifecycle management, tech rollouts, and business launch support. Our services cater to businesses looking to optimize digital performance, launch new ventures, or expand their market reach. Ready to get Started?</p>
-            <a href="#contact-us" class="btn">Contact Us Today</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Elite Digital Global Consulting Services</h3>
-                    <p>Your partner for global digital transformation strategies & excellence.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="our-services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Terms</h3>
-                    <ul>
-                        <li><a href="index.html">Privacy Policy</a></li>
-                        <li><a href="about.html">Conditions</a></li>
-                        <li><a href="our-services.html">FAQ</a></li>
-                        <li><a href="portfolio.html">Refund Policy</a></li>
-                        <li><a href="contact.html">Elite Travel</a></li>
+</header>
+<section class="hero-section-main">
+<div class="hero-overlay">
+<h1>ENTERPRISE TECHNOLOGY SOLUTIONS. GLOBAL EXPERIENCE. RELIABLE DELIVERY.</h1>
+<p>From software engineering and scalable platforms to DevOps, AI and technical project leadership, we help ambitious organizations turn complex technology challenges into practical business outcomes.</p>
+<a class="btn" href="contact.html">Discuss Your Project</a>
+</div>
+</section>
+<section class="intro-text-section">
+<div class="container">
+<p>"International technology experience, hands-on engineering leadership and an experienced Nigeria-based delivery team — working together to build, modernize and support digital products for organizations worldwide."</p>
+</div>
+</section>
+<section class="why-choose-section">
+<div class="container">
+<h2>Why Partner with Elite Digital Consulting?</h2>
+<p>Work with a technology partner that combines international delivery experience, clear technical ownership and engineering capability across the full project lifecycle.</p>
+<div class="why-choose-grid">
+<div class="why-choose-item">
+<img alt="Professional team collaborating in a modern office (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>Proven Expertise</h3>
+<p>International experience across established brands, agencies and technology teams, bringing practical insight to complex projects and demanding delivery environments worldwide.</p>
+</div>
+<div class="why-choose-item">
+<img alt="Colleagues discussing a project in an office (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>Client-Centric Approach</h3>
+<p>We listen closely to your objectives, align with stakeholders and design technology solutions around real operational needs and measurable business priorities.</p>
+</div>
+<div class="why-choose-item">
+<img alt="Diverse team collaborating at work (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>Global Readiness</h3>
+<p>Experience collaborating across international markets and distributed teams helps us navigate different workflows, expectations and technical requirements with clarity and confidence.</p>
+</div>
+<div class="why-choose-item">
+<img alt="Team planning and discussing business strategy (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>End-to-End Solutions</h3>
+<p>From initial strategy and architecture through development, deployment and support, we coordinate the expertise needed to deliver dependable digital solutions successfully.</p>
+</div>
+<div class="why-choose-item">
+<img alt="Contemporary office workspace (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>Data-Driven Strategies</h3>
+<p>We use evidence, stakeholder feedback and performance insights to guide decisions, prioritize improvements and connect technology investments with meaningful business outcomes.</p>
+</div>
+<div class="why-choose-item">
+<img alt="Technology team working together (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<h3>Scalable Technology</h3>
+<p>We build adaptable digital foundations that support evolving business requirements, future integrations, maintainable systems and sustainable growth without unnecessary technical complexity.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="services-showcase-section">
+<div class="container">
+<h2>Technology Capabilities That Move Business Forward</h2>
+<div class="showcase-grid">
+<div class="showcase-item">
+<img alt="Bright modern office interior (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>Digital Experience &amp; Content Platforms</h3>
+<p>We design and improve content-rich digital experiences, strengthen CMS workflows, optimize website performance and support consistent publishing across complex business channels.</p>
+</div>
+</div>
+<div class="showcase-item">
+<img alt="Technology professionals collaborating on laptops (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>Software &amp; Web Platform Engineering</h3>
+<p>We engineer responsive websites, custom applications, commerce experiences and business platforms, connecting reliable frontend interfaces with robust backend services and integrations.</p>
+</div>
+</div>
+<div class="showcase-item">
+<img alt="Business team in a collaborative meeting (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>Agile Technical Project Leadership</h3>
+<p>We coordinate technical roadmaps, cross-functional delivery teams, Scrum ceremonies, project risks and quality assurance from early discovery through successful product launch.</p>
+</div>
+</div>
+<div class="showcase-item">
+<img alt="Analytics and digital strategy workspace (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>Digital Transformation &amp; Integration</h3>
+<p>We modernize business workflows, connect fragmented systems, improve operational visibility and introduce practical technology changes that reduce friction across teams and platforms.</p>
+</div>
+</div>
+<div class="showcase-item">
+<img alt="Business meeting and project discussion (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>DevOps, Cloud &amp; Platform Operations</h3>
+<p>We support cloud infrastructure, deployment automation, environment management, monitoring and platform reliability to help organizations operate securely and scale with confidence.</p>
+</div>
+</div>
+<div class="showcase-item">
+<img alt="Modern workplace and technology collaboration (illustrative stock photography)" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+<div class="showcase-content">
+<h3>AI Solutions &amp; Product Experience</h3>
+<p>We explore practical AI-enabled workflows, intelligent product features and intuitive interfaces, matching emerging capabilities to clear user needs and realistic business objectives.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="featured-section">
+<div class="container">
+<div class="featured-item">
+<div class="featured-image">
+<img alt="Professionals collaborating around a table during a business project meeting" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+</div>
+<div class="featured-content">
+<h2>Our Approach</h2>
+<p>Our delivery model connects strategic discovery, hands-on engineering and accountable execution — from initial scoping through continuous improvement.</p>
+<ul>
+<li><strong>Discovery &amp; Technical Strategy:</strong> We clarify business objectives, user needs, existing systems, delivery constraints and success criteria before defining the right solution.</li>
+<li><strong>Engineering &amp; Delivery:</strong> Frontend, backend and DevOps specialists collaborate around milestones, code quality, deployment readiness and maintainability.</li>
+<li><strong>Agile Collaboration:</strong> Scrum and iterative delivery practices keep stakeholders informed, surface risks early and make progress visible.</li>
+<li><strong>Long-Term Partnership:</strong> We plan for support, optimization and future growth rather than treating launch day as the finish line.</li>
+</ul>
+<a class="btn" href="about.html">Explore Our Experience</a>
+</div>
+</div>
+</div>
+</section>
+<section class="clients-section">
+<div class="container">
+<h2>Organizations &amp; Brands Behind Our Experience</h2>
+<p>Our professional and agency-delivered project experience spans Samsung, Cheil Germany, Hochschule Fresenius, Masterplan, Elanco, CtrlQS, Henkel, NIVEA, IWC Schaffhausen, Ottobock, GROHE, Elite Travel Study Work Services, and GrandSignature Properties.</p>
+</div>
+<div aria-label="Organizations and brands associated with our professional experience" class="client-marquee">
+<div class="client-marquee-track">
+<div class="client-marquee-group">
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Samsung</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Cheil Germany</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Hochschule Fresenius</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Masterplan</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Elanco</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>CtrlQS</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Henkel</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>NIVEA</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>IWC Schaffhausen</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Ottobock</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>GROHE</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Elite Travel Study Work Services</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>GrandSignature Properties</span></div>
+</div>
+<div aria-hidden="true" class="client-marquee-group">
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Samsung</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Cheil Germany</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Hochschule Fresenius</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Masterplan</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Elanco</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>CtrlQS</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Henkel</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>NIVEA</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>IWC Schaffhausen</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Ottobock</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>GROHE</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>Elite Travel Study Work Services</span></div>
+<div class="client-logo-item" style="background:#fff;padding:22px 12px;border-radius:8px;color:#0056b3;font-weight:bold;min-height:110px;min-width:175px;max-width:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-sizing:border-box;text-align:center;"><span>GrandSignature Properties</span></div>
+</div>
+</div>
+</div>
+<div class="container"><p style="font-size:0.85em;margin-top:24px;color:#555;">These references include individual professional experience, agency-delivered brand projects and websites built for our own clients. They do not imply that every organization is a direct client of Elite Digital Consulting or endorses our services.</p></div>
+</section>
+<section class="testimonials-section">
+<div class="container">
+<h2>What You Can Expect From Our Team</h2>
+<div class="testimonial-grid">
+<div class="testimonial-item"><p class="quote">International experience across software development, content management, technical leadership and complex digital environments.</p><div class="client-info"><strong>Senior-Level Technical Perspective</strong><span>Practical insight — Strategy grounded in delivery</span></div></div>
+<div class="testimonial-item"><p class="quote">Access to an experienced Nigeria-based team supporting frontend, backend, DevOps and platform implementation.</p><div class="client-info"><strong>Engineering Capacity When You Need It</strong><span>Flexible collaboration — Built around project scope</span></div></div>
+<div class="testimonial-item"><p class="quote">Structured discovery, Agile coordination, transparent milestones and a focus on reliable, maintainable outcomes.</p><div class="client-info"><strong>Clear, Accountable Delivery</strong><span>Delivery discipline — From planning to support</span></div></div>
+</div>
+</div>
+</section>
+<section class="extensive-offerings">
+<div class="container">
+<h2>Solutions for Complex Business Needs</h2>
+<div class="offerings-grid">
+<div class="offering-item">
+<h3>Software Delivery &amp; Product Launches</h3>
+<p>Product discovery, MVPs, application engineering, sprint planning, release management and ongoing platform support.</p>
+<a class="btn" href="our-services.html">Explore Services</a>
+</div>
+<div class="offering-item">
+<h3>Technical Advisory &amp; Delivery Leadership</h3>
+<p>Technology roadmaps, delivery governance, Agile/Scrum coordination, team enablement and hands-on technical project management.</p>
+<a class="btn" href="contact.html">Request a Consultation</a>
+</div>
+<div class="offering-item">
+<h3>Enterprise Platforms &amp; Automation</h3>
+<p>CMS and commerce platforms, backend integrations, workflow automation, AI opportunities and operational improvements.</p>
+<a class="btn" href="our-services.html">Explore Capabilities</a>
+</div>
+</div>
+</div>
+</section>
+<section class="services-grid-blue">
+<div class="container">
+<div class="service-item">
+<h3>Content &amp; Digital Experience</h3>
+<ul>
+<li>Technical SEO &amp; Performance</li>
+<li>CMS Architecture &amp; Governance</li>
+<li>Content Operations &amp; Publishing</li>
+<li>Digital Experience Optimization</li>
+</ul>
+</div>
+<div class="service-item">
+<h3>Software &amp; Web Engineering</h3>
+<ul>
+<li>Frontend Application Development</li>
+<li>Backend &amp; API Development</li>
+<li>CMS/ Software &amp; Web Engineering</li>
+<li>Responsive, Accessible Interfaces</li>
+</ul>
+</div>
+<div class="service-item">
+<h3>Agile Technology Delivery</h3>
+<ul>
+<li>Technical Roadmaps &amp; Scoping</li>
+<li>Agile &amp; Scrum Facilitation</li>
+<li>Cross-Functional Team Coordination</li>
+<li>Quality Assurance &amp; Releases</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="services-grid-white">
+<div class="container">
+<div class="service-item">
+<h3>Technology Consulting</h3>
+<ul>
+<li>Technical Discovery &amp; Analysis</li>
+<li>Digital Transformation Strategy</li>
+<li>Architecture &amp; Platform Advisory</li>
+<li>Workflow &amp; Systems Improvement</li>
+</ul>
+</div>
+<div class="service-item">
+<h3>Product &amp; UX Design</h3>
+<ul>
+<li>Interface &amp; Interaction Design</li>
+<li>User Journey Optimization</li>
+<li>Design Systems &amp; Prototyping</li>
+<li>Accessible Digital Experiences</li>
+</ul>
+</div>
+<div class="service-item">
+<h3>DevOps, Cloud &amp; AI</h3>
+<ul>
+<li>Cloud &amp; Environment Planning</li>
+<li>CI/CD &amp; Deployment Support</li>
+<li>Platform Operations &amp; Reliability</li>
+<li>AI-Enabled Workflow Solutions</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<p>Planning a platform launch, enterprise website, software modernization or AI initiative? Tell us what you need to achieve. We will help you define the technical approach, delivery priorities and next steps.</p>
+<div class="homepage-cta-actions"><a class="btn" href="contact.html">Request a Project Discussion</a><a class="btn" href="https://wa.me/2348109917302?text=Hello%20Elite%20Digital%20Consulting%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." rel="noopener noreferrer" target="_blank">Chat on WhatsApp</a></div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-col">
+<h3>Elite Digital Consulting</h3>
+<p>Enterprise-focused technology consulting, software engineering, DevOps and AI solutions — backed by international experience and an experienced delivery team.</p>
+</div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="our-services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Terms</h3>
+<ul>
+<li><a href="about.html">Our Experience</a></li>
+<li><a href="our-services.html">Technology Services</a></li>
+<li><a href="portfolio.html">Selected Work</a></li>
+<li><a href="https://wa.me/2348109917302" rel="noopener noreferrer" target="_blank">WhatsApp Consultation</a></li>
 <li><a href="contact.html">Get A Quote</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p>2/4 Harmony Estate, Ajah 101245,<br> Lagos, Nigeria</p>
-                    <p>Email: info@elitedigitalglobalconsulting.com</p>
-                    <p>Phone: +4915219231584</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/elite_digital_global/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@elite_digital_global" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.twitter.com/@elite_digital_global" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/elite_digital_global/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Contact Info</h3>
+<p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p>
+<p>Email: info@elitedigitalglobalconsulting.com</p>
+<p>WhatsApp: <a href="https://wa.me/2348109917302" rel="noopener noreferrer" style="color:inherit;" target="_blank">+234 810 991 7302</a></p>
+</div>
+<div class="footer-col">
+<h3>Follow Us</h3>
+<div class="social-links">
+<a aria-label="Facebook" href="https://www.facebook.com/elite_digital_global/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@elite_digital_global" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a aria-label="Twitter" href="https://www.twitter.com/@elite_digital_global" target="_blank"><i class="fab fa-twitter"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/elite_digital_global/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="copyright">
+                © 2026 Elite Digital Consulting. All rights reserved.
             </div>
-            <div class="copyright">
-                &copy; 2025 Elite Digital Global Consulting Services. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
+</div>
+</footer>
 </body>
 </html>

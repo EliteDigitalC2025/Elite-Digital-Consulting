@@ -3,24 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Global Consulting Services - Contact Us</title>
+    <title>Contact Elite Digital Consulting | Enterprise Technology & Software Projects</title>
+    <meta name="description" content="Contact Elite Digital Consulting to discuss software engineering, DevOps, AI solutions, enterprise platforms and technology project delivery.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-    <header>
-    <div class="container">
-        <div class="logo">Elite Digital Global</div>
-        <nav class="navbar" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="our-services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
     <style>
         /* General Body and Container Styling */
         body {
@@ -81,7 +66,7 @@
 
         /* Hero Section (Specific to Services/Contact page banners) */
         .hero-section {
-            background: url('https://i.imgur.com/PdH2VbH.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 35, 78, 0.40), rgba(0, 35, 78, 0.40)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 120px 20px; /* Adjusted padding for larger banner */
@@ -661,14 +646,63 @@
                 font-size: 1.8em;
             }
         }
+
+        /* Contact page usability improvements; original color palette preserved */
+        *, *::before, *::after { box-sizing: border-box; }
+        .contact-form-col, .contact-info-col { min-width: 0; }
+        .form-group input[type="text"], .form-group input[type="email"], .form-group textarea { width: 100%; }
+        .form-intro { margin: -10px 0 25px; color: #555; }
+        .form-note { font-size: .9em; color: #555; line-height: 1.6; }
+        .form-note a, .contact-info-details a, footer .footer-col p a { color: #0056b3; overflow-wrap: anywhere; }
+        footer .footer-col p a { color: #fff; }
+        .contact-info-details p { align-items: flex-start; overflow-wrap: anywhere; }
+        .contact-info-details p i { flex-shrink: 0; margin-top: 4px; }
+        .hero-section { min-height: 420px; }
+        .hero-overlay { width: min(100%, 800px); }
+        .hero-section h1 { font-size: clamp(2rem, 5vw, 3.8rem); }
+        .map-section .container > p { max-width: 720px; margin: 0 auto 25px; }
+        @media(max-width:768px) { .contact-form-col, .contact-info-col { max-width: 100%; width: 100%; } .hero-section { min-height: 340px; } }
+
+        /* Balanced contact panels: equal widths, equal heights, aligned top and bottom. */
+        .contact-flex-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 30px;
+        }
+        .contact-form-col, .contact-info-col {
+            width: 100%;
+            max-width: none;
+            min-width: 0;
+            height: 100%;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            .contact-flex-container { grid-template-columns: 1fr; }
+            .contact-form-col, .contact-info-col { height: auto; }
+        }
     </style>
 </head>
 <body>
+    <header>
+    <div class="container">
+        <div class="logo">Elite Digital Consulting</div>
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="our-services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="hero-section">
         <div class="hero-overlay">
-            <h1>GET IN TOUCH WITH US</h1>
-            <p>We're here to answer your questions and help you achieve your digital goals.</p>
+            <h1>LET’S BUILD WHAT’S NEXT</h1>
+            <p>Speak with an experienced technology delivery partner about your next software, platform, DevOps or AI initiative.</p>
         </div>
     </section>
 
@@ -676,8 +710,9 @@
         <div class="container">
             <div class="contact-flex-container">
                 <div class="contact-form-col">
-                    <h2>Send Us a Message</h2>
-                    <form action="#" method="POST"> <div class="form-group">
+                    <h2>Tell Us About Your Project</h2>
+                    <p class="form-intro">Share your objectives, timeline and technical requirements. We’ll help identify a practical next step.</p>
+                    <form id="project-enquiry-form"> <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
@@ -694,17 +729,19 @@
                             <textarea id="message" name="message" required></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit">Send Message</button>
+                            <button type="submit">Send Project Enquiry Email</button>
                         </div>
                     </form>
+                    <p class="form-note">This opens your email application with your enquiry prepared. Please press Send in your email application to complete it. Alternatively, <a href="mailto:info@elitedigitalglobalconsulting.com">email us directly</a> or <a href="https://wa.me/2348109917302" target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>.</p>
                 </div>
 
                 <div class="contact-info-col">
-                    <h2>Contact Information</h2>
+                    <h2>Let’s Talk Business</h2>
+                    <p>Whether you need an engineering partner, technical project leadership or specialist DevOps support, we welcome a conversation about your goals.</p>
                     <div class="contact-info-details">
-                        <p><i class="fas fa-map-marker-alt"></i> 2/4 Harmony Estate, Ajah 101245,<br>Lagos, Nigeria</p>
-                        <p><i class="fas fa-envelope"></i> info@elitedigitalglobalconsulting.com</p>
-                        <p><i class="fas fa-phone-alt"></i> +4915219231584</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@elitedigitalglobalconsulting.com">info@elitedigitalglobalconsulting.com</a></p>
+                        <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/2348109917302" target="_blank" rel="noopener noreferrer">WhatsApp: +234 810 991 7302</a></p>
                     </div>
                     <div class="follow-us-block">
                         <h3>Follow Us</h3>
@@ -712,7 +749,6 @@
                             <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                             <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
@@ -723,10 +759,11 @@
 
     <section class="map-section">
         <div class="container">
-            <h2>Find Us on the Map</h2>
+            <h2>Our Lagos Office</h2>
+            <p>Meetings and consultations are arranged by appointment. Remote project discussions are available for international clients.</p>
             <div class="map-container">
                 <iframe 
-    src="https://www.google.com/maps?q=2/4%20Harmony%20Estate,%20Ajah%20101245,%20Lagos,%20Nigeria&output=embed"
+    src="https://www.google.com/maps?q=Tina%20Johnson%20Close%2C%20Coastal%20Road%20Salem%20Okun-Ajah%2C%20beside%20Avista%20Beach%2C%20Lekki-Epe%20Expressway%2C%20Eti-Osa%20LGA%2C%20Lagos%20106104%2C%20Nigeria&amp;output=embed"
     width="100%" 
     height="450" 
     style="border:0;" 
@@ -741,8 +778,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Elite Digital Global Consulting Services</h3>
-                    <p>Your partner in digital transformation.</p>
+                    <h3>Elite Digital Consulting</h3>
+                    <p>International experience. Engineering expertise. Accountable technology delivery.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Quick Links</h3>
@@ -756,9 +793,9 @@
                 </div>
                 <div class="footer-col">
                     <h3>Contact Info</h3>
-                    <p>2/4 Harmony Estate, Ajah 101245,<br>Lagos, Nigeria</p>
-                    <p>Email: info@elitedigitalglobalconsulting.com</p>
-                    <p>Phone: +4915219231584</p>
+                    <p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p>
+                    <p>Email: <a href="mailto:info@elitedigitalglobalconsulting.com">info@elitedigitalglobalconsulting.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/2348109917302" target="_blank" rel="noopener noreferrer">+234 810 991 7302</a></p>
                 </div>
                 <div class="footer-col">
                     <h3>Follow Us</h3>
@@ -766,16 +803,28 @@
                         <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                © 2025 Elite Digital Global Consulting Services. All rights reserved.
+                © 2026 Elite Digital Consulting. All rights reserved.
             </div>
         </div>
     </footer>
 
+
+    <script>
+      // GitHub Pages hosts static files; this form prepares an email instead of pretending to submit to a server.
+      document.getElementById('project-enquiry-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const body = 'Name: ' + name + '\nEmail: ' + email + '\n\nProject details:\n' + message;
+        window.location.href = 'mailto:info@elitedigitalglobalconsulting.com?subject=' + encodeURIComponent('Project enquiry: ' + subject) + '&body=' + encodeURIComponent(body);
+      });
+    </script>
 </body>
 </html>

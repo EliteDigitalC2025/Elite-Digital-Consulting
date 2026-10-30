@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Digital Global Consulting Services - About Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <header>
-    <div class="container">
-        <div class="logo">Elite Digital Global</div>
-        <nav class="navbar" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="our-services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Elite Digital Consulting — Enterprise Technology &amp; Engineering</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
         /* General Body and Container Styling (Copied from your existing CSS) */
         body {
             font-family: Arial, sans-serif;
@@ -430,134 +415,122 @@
                 padding: 20px;
             }
         }
-    </style>
-</head>
-<body>
+    
+/* About-page refinements: preserve original blue-and-white visual design */
+.about-hero-section{background-image:linear-gradient(rgba(0,30,67,.42),rgba(0,30,67,.42)),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85");min-height:340px;box-sizing:border-box;}
+.featured-image img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+.team-grid{align-items:stretch}.expertise-card{display:flex;flex-direction:column;justify-content:center;min-height:190px;box-sizing:border-box}.expertise-card h3{font-size:1.35em}.expertise-card p.bio{font-size:1em;line-height:1.6;margin-bottom:0}
+footer a{color:inherit}.cta-section .btn{margin-top:8px}
+@media(max-width:768px){.about-hero-section{min-height:310px;padding:70px 16px}.about-hero-section h1{font-size:2.2em}.featured-image,.featured-content{min-width:0}.cta-section .btn{margin:8px}}
 
+/* 2026 layout refinement: consistent cards and CTA geometry */
+*,*::before,*::after{box-sizing:border-box}
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:24px}
+.team-grid>.team-member{min-width:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:28px 22px}
+.team-grid>.team-member h3{display:block;text-align:center;min-height:2.8em;line-height:1.35;margin:0 0 14px;width:100%;font-size:1.25em}
+.team-grid>.team-member p.bio{flex:1;margin:0;line-height:1.65}
+.btn{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-width:230px;min-height:50px;padding:12px 22px;line-height:1.3;text-align:center;font-weight:600;white-space:normal}
+.cta-section .container{display:flex;flex-direction:column;align-items:center}
+.cta-section .cta-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:14px;width:100%;margin-top:4px}
+.cta-section .cta-actions .btn{margin:0!important;width:240px;max-width:100%}
+@media(max-width:1050px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.team-grid{grid-template-columns:1fr}.team-grid>.team-member h3{min-height:2.8em}.cta-section .cta-actions{flex-direction:column;align-items:center}.cta-section .cta-actions .btn{width:min(100%,320px)}.featured-item,.featured-item.reverse{gap:24px}.featured-image,.featured-content{min-width:0}}
+</style></head>
 
-    <section class="about-hero-section">
-        <div class="hero-overlay">
-            <h1>ABOUT ELITE DIGITAL GLOBAL CONSULTING SERVICES</h1>
-            <p>Your Trusted Partner in Digital Transformation and Business Growth.</p>
-        </div>
-    </section>
-
-    <section class="intro-text-section">
-        <div class="container">
-            <p>"At Elite Digital Global Consulting Services, we are more than just consultants; we are architects of digital success. With a passion for innovation and a decade of expertise, we empower businesses across Africa to thrive in the digital age."</p>
-        </div>
-    </section>
-
-    <section class="featured-section">
-        <div class="container">
-            <div class="featured-item">
-                <div class="featured-image">
-                    <img src="https://via.placeholder.com/600x400/ADD8E6/000080?text=Our+Story" alt="Our Story Image">
-                </div>
-                <div class="featured-content">
-                    <h2>Our Story & Mission</h2>
-                    <p>Founded with a vision to bridge the digital divide in Africa, Elite Digital Global Consulting Services began its journey over 10 years ago. We recognized the immense potential for growth and transformation that technology offered, and we committed ourselves to guiding businesses through this evolving landscape.</p>
-                    <p>Our mission is to provide innovative, tailored, and comprehensive digital solutions that drive measurable success, foster sustainable growth, and enable our clients to achieve their full potential.</p>
-                </div>
-            </div>
-
-            <div class="featured-item reverse bg-light">
-                <div class="featured-image">
-                    <img src="https://via.placeholder.com/600x400/B0E0E6/000080?text=Our+Vision" alt="Our Vision Image">
-                </div>
-                <div class="featured-content">
-                    <h2>Our Vision & Values</h2>
-                    <p>We envision a future where every African business, regardless of size, can harness the power of digital innovation to compete globally. We strive to be the leading digital consulting firm in Africa, known for our strategic insight, technical excellence, and unwavering commitment to client success.</p>
-                    <ul>
-                        <li><strong>Innovation:</strong> Continuously seeking new and better ways to solve complex challenges.</li>
-                        <li><strong>Client-Centricity:</strong> Placing our clients' needs and success at the forefront of everything we do.</li>
-                        <li><strong>Integrity:</strong> Operating with transparency, honesty, and the highest ethical standards.</li>
-                        <li><strong>Excellence:</strong> Delivering superior quality in every project and interaction.</li>
-                        <li><strong>Empowerment:</strong> Equipping our clients with the knowledge and tools to sustain their digital growth.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="team-section">
-        <div class="container">
-            <h2>Meet Our Expert Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Jane+Doe" alt="Jane Doe">
-                    <h3>Jane Doe</h3>
-                    <p class="role">Chief Executive Officer</p>
-                    <p class="bio">With 15+ years in tech leadership, Jane steers our vision and ensures operational excellence.</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=John+Smith" alt="John Smith">
-                    <h3>John Smith</h3>
-                    <p class="role">Head of Digital Strategy</p>
-                    <p class="bio">John's expertise in market analysis drives our impactful digital marketing campaigns.</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Alice+Brown" alt="Alice Brown">
-                    <h3>Alice Brown</h3>
-                    <p class="role">Lead Web Developer</p>
-                    <p class="bio">Alice brings creative and technical prowess to every website and e-commerce solution.</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150/87CEEB/FFFFFF?text=Robert+Green" alt="Robert Green">
-                    <h3>Robert Green</h3>
-                    <p class="role">Senior IT Consultant</p>
-                    <p class="bio">Robert specializes in cloud solutions and IT infrastructure, ensuring robust systems.</p>
-                </div>
-                </div>
-        </div>
-    </section>
-
-
-    <section class="cta-section">
-        <div class="container">
-            <p>Ready to embark on your digital transformation journey with Elite Digital Global Consulting Services?</p>
-            <a href="contact.html" class="btn">Contact Us Today</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Elite Digital Global Consulting Services</h3>
-                    <p>Your partner in digital transformation.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li> <li><a href="our-services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p>2/4 Harmony Estate, Ajah 101245,<br>Lagos, Nigeria</p>
-                    <p>Email: info@elitedigitalglobalconsulting.com</p>
-                    <p>Phone: +4915219231584</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                © 2025 Elite Digital Global Consulting Services. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
+<body><header>
+<div class="container">
+<div class="logo">Elite Digital Consulting</div>
+<nav aria-label="Main Navigation" class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="our-services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="about-hero-section">
+<div class="hero-overlay">
+<h1>Global Technology Experience. Practical Engineering Leadership.</h1>
+<p>We help businesses, agencies and institutions build scalable platforms, strengthen delivery and turn ambitious technology goals into measurable results.</p>
+</div>
+</section>
+<section class="intro-text-section">
+<div class="container">
+<p>International experience, hands-on technical leadership and a skilled Nigeria-based engineering and DevOps team — working together to solve complex digital challenges.</p>
+</div>
+</section>
+<section class="featured-section">
+<div class="container">
+<div class="featured-item">
+<div class="featured-image">
+<img alt="Technology professionals collaborating around a laptop" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+</div>
+<div class="featured-content">
+<h2>Our Story &amp; Mission</h2>
+<p>Elite Digital Consulting brings together international professional experience and practical engineering capability. Our leadership background spans frontend and backend development, content management, digital platforms, Agile and Scrum delivery, and technical project management across agency and enterprise environments.</p><p>Our experience includes work undertaken through agencies and professional roles on projects involving Samsung, Cheil Germany, Hochschule Fresenius, Masterplan, Elanco, CtrlQS, Henkel, NIVEA, IWC Schaffhausen, Ottobock and GROHE. We have also developed digital websites for Elite Travel Study Work Services and GrandSignature Properties.</p><p>Today, we connect strategic guidance with experienced developers and DevOps professionals based in Nigeria to help clients plan, build, modernize and maintain dependable digital solutions. We work with businesses directly and collaborate with agencies that need additional technical delivery capacity.</p></div>
+</div>
+<div class="featured-item reverse bg-light">
+<div class="featured-image">
+<img alt="Business and technology team planning a project" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+</div>
+<div class="featured-content">
+<h2>Our Vision &amp; Values</h2>
+<p>Our vision is to be a trusted technology delivery partner for organizations operating across markets. We combine strategic thinking, transparent collaboration and practical execution to create secure, maintainable solutions that grow with our clients.</p>
+<ul>
+<li>Engineering excellence: Build for quality, performance, maintainability and long-term value.</li>
+<li>Client partnership: Understand business goals and communicate clearly throughout delivery.</li>
+<li>Accountability: Make scope, milestones, ownership and progress transparent.</li>
+<li>Agile execution: Use iterative delivery and Scrum practices where they add value.</li>
+<li>Continuous improvement: Support products and platforms beyond launch.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="team-section">
+<div class="container">
+<h2>The Expertise Behind Our Delivery</h2>
+<div class="team-grid"><div class="team-member expertise-card"><h3>Technical<br>Leadership</h3><p class="bio">Frontend and backend engineering, architecture, content platforms and hands-on technology direction informed by international project experience.</p></div><div class="team-member expertise-card"><h3>Engineering &amp;<br>DevOps</h3><p class="bio">Experienced Nigeria-based developers and DevOps professionals supporting web applications, platform operations, deployment and ongoing improvement.</p></div><div class="team-member expertise-card"><h3>Agile Project<br>Delivery</h3><p class="bio">Practical Scrum and Agile coordination, stakeholder communication, delivery planning and technical project management across multidisciplinary teams.</p></div><div class="team-member expertise-card"><h3>AI &amp; Digital<br>Solutions</h3><p class="bio">AI-enabled workflows, automation, modern websites and digital products designed around business requirements and maintainability.</p></div></div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<p>Need a dependable technology partner for your next enterprise platform, agency project or digital transformation initiative?</p>
+<div class="cta-actions"><a class="btn" href="contact.html">Discuss Your Project</a>
+<a class="btn" href="https://wa.me/2348109917302" rel="noopener noreferrer" target="_blank">Chat on WhatsApp</a></div></div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-col">
+<h3>Elite Digital Consulting</h3>
+<p>Technology consulting, software engineering, DevOps and digital delivery for ambitious organizations.</p>
+</div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li> <li><a href="our-services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col"><h3>Contact Info</h3><p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p><p>Email: info@elitedigitalglobalconsulting.com</p><p>WhatsApp: <a href="https://wa.me/2348109917302" style="color:inherit">+234 810 991 7302</a></p></div>
+<div class="footer-col">
+<h3>Follow Us</h3>
+<div class="social-links">
+<a aria-label="Facebook" href="https://www.facebook.com/elite_consulting_official/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@eliteconsulting_official" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a aria-label="Twitter" href="https://www.twitter.com/@eliteconsulting_official" target="_blank"><i class="fab fa-twitter"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/elite_consulting_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="copyright">© 2026 Elite Digital Consulting. All rights reserved.</div>
+</div>
+</footer>
 </body>
 </html>
