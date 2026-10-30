@@ -1,585 +1,1211 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Technology Services | Elite Digital Consulting</title>
+<meta name="description" content="Elite Digital Consulting delivers custom web and mobile applications, enterprise software, AI automation, DevOps, cloud engineering, Agile delivery and digital transformation services.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <style>
-        /* General Body and Container Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #f8f8f8;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #0056b3;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Hero Section (Specific to Services page) */
-        .hero-section {
-            /* Image URL already correct from previous fix */
-            background: url('https://i.imgur.com/PdH2VbH.jpg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 120px 20px; /* Adjusted padding */
-            position: relative;
-            min-height: 500px; /* INCREASED MIN-HEIGHT for larger banner */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 40px 20px;
-            border-radius: 8px;
-            max-width: 800px; /* Add max-width for overlay text readability on wide screens */
-        }
-
-        .hero-section h1 {
-            font-size: 3.8em; /* Slightly larger text */
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            line-height: 1.2;
-        }
-
-        .hero-section p {
-            font-size: 1.4em; /* Slightly larger text */
-            margin-top: 0;
-        }
-
-        /* Intro Text Section */
-        .intro-text-section {
-            background-color: #e6f2ff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .intro-text-section p {
-            font-size: 1.2em;
-            font-style: italic;
-            color: #0056b3;
-        }
-
-        /* Featured Section (Two Columns - Our Approach) */
-        .featured-section {
-            padding: 60px 0;
-            background-color: #fff;
-        }
-
-        .featured-item {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        .featured-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        .featured-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .featured-content {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .featured-content h2 {
-            color: #0056b3;
-            font-size: 2.5em;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .featured-content p {
-            margin-bottom: 20px;
-        }
-
-        .featured-content ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        .featured-content ul li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-            line-height: 1.5;
-            text-align: left;
-        }
-
-        .featured-content ul li::before {
-            content: '\2022';
-            color: #007bff;
-            font-size: 1.5em;
-            position: absolute;
-            left: 0;
-            top: 0;
-            line-height: 1;
-        }
-        .featured-content ul li strong {
-            color: #0056b3;
-        }
-
-        /* Buttons */
-        .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Service Grids (Blue and White) */
-        .services-grid-blue, .services-grid-white {
-            padding: 60px 0;
-        }
-
-        .services-grid-blue {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .services-grid-white {
-            background-color: #f8f8f8;
-        }
-
-        .services-grid-blue .container,
-        .services-grid-white .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-
-        .services-grid-white .service-item {
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #eee;
-        }
-
-        .service-item h3 {
-            margin-top: 0;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: inherit;
-        }
-
-        .service-item ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-item ul li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .service-item ul li::before {
-            content: '✔';
-            position: absolute;
-            left: 0;
-            color: #fff;
-        }
-
-        .services-grid-white .service-item ul li::before {
-            color: #007bff;
-        }
-
-        /* Extensive Offerings Section */
-        .extensive-offerings {
-            padding: 60px 0;
-            text-align: center;
-            background-color: #fff;
-        }
-
-        .extensive-offerings h2 {
-            color: #0056b3;
-            font-size: 2.8em;
-            margin-bottom: 40px;
-        }
-
-        .offerings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .offering-item {
-            background-color: #f0f0f0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .offering-item h3 {
-            color: #007bff;
-            font-size: 1.6em;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        /* Call to Action Section */
-        .cta-section {
-            background-color: #e6f2ff;
-            padding: 50px 20px;
-            text-align: center;
-            color: #0056b3;
-        }
-
-        .cta-section p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 40px 0 20px;
-            font-size: 0.9em;
-        }
-
-        footer .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-col {
-            flex: 1;
-            min-width: 200px;
-            max-width: 280px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.2em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-col ul li a {
-            text-decoration: none;
-            color: #e0e0e0;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: #fff;
-        }
-
-        .footer-col p {
-            margin-bottom: 10px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 20px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 5px 10px;
-            }
-
-            .hero-section h1 {
-                font-size: 2.5em;
-            }
-
-            .hero-section p {
-                font-size: 1em;
-            }
-
-            .featured-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .featured-image, .featured-content {
-                min-width: unset;
-                width: 100%;
-            }
-
-            .services-grid-blue .container,
-            .services-grid-white .container,
-            .offerings-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-col {
-                text-align: center;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 20px;
-            }
-
-            .hero-section {
-                padding: 80px 15px;
-            }
-
-            .hero-section h1 {
-                font-size: 2em;
-            }
-
-            .intro-text-section p, .cta-section p {
-                font-size: 1em;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-
-            .service-item, .offering-item {
-                padding: 20px;
-            }
-        }
-    
-/* Enterprise services enhancements: existing brand palette retained */
-*,*::before,*::after{box-sizing:border-box}
-.hero-section{background-image:linear-gradient(rgba(0,29,65,.40),rgba(0,29,65,.45)),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85');min-height:460px;padding:95px 20px}
-.hero-overlay{background:rgba(0,20,43,.68);max-width:850px}
-.hero-section h1{font-size:clamp(2rem,4vw,3.5rem)}
-.hero-section p{font-size:clamp(1rem,2vw,1.35rem)}
-.hero-actions,.cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.btn-secondary{background:#fff;color:#0056b3;border:1px solid #c8ddf5}
-.btn-secondary:hover{background:#e6f2ff;color:#00458f}
-.intro-text-section p{max-width:950px;margin:auto;font-style:normal}
-.featured-item{align-items:center}
-.featured-image img{width:100%;height:355px;object-fit:cover}
-.services-grid-blue .container,.services-grid-white .container{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
-.service-item{display:flex;flex-direction:column;height:100%;min-width:0}
-.service-item h3{font-size:1.45rem;line-height:1.3;min-height:3.8rem}
-.service-item p{margin:0 0 15px}
-.service-item ul{margin:0 0 16px;flex:1}
-.service-item .btn{margin-top:auto;align-self:flex-start}
-.services-grid-blue .service-item .btn{background:#fff;color:#0056b3}
-.services-grid-blue .service-item .btn:hover{background:#e6f2ff}
-.extensive-offerings .offerings-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
-.offering-item{display:flex;flex-direction:column;align-items:center;height:100%}
-.offering-item h3{font-size:1.45rem;line-height:1.3;min-height:3.8rem}
-.offering-item p{flex:1;margin:0}
-.offering-item .btn{margin-top:22px}
-.section-heading{text-align:center;color:#0056b3;font-size:2.4rem;margin:0 0 15px}
-.section-lead{text-align:center;max-width:880px;margin:0 auto 36px}
-.section-heading.light,.section-lead.light{color:#fff}
-.cta-section p{max-width:930px;margin:0 auto 20px;font-size:1.2rem}
-.contact-shortcut{margin-top:20px;font-size:1rem}
-.footer-col a{overflow-wrap:anywhere}
-@media(max-width:950px){.services-grid-blue .container,.services-grid-white .container,.extensive-offerings .offerings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.services-grid-blue .container,.services-grid-white .container,.extensive-offerings .offerings-grid{grid-template-columns:1fr}.service-item h3,.offering-item h3{min-height:0}.featured-image img{height:260px}.hero-section{min-height:380px}.hero-overlay{padding:25px 18px}.section-heading{font-size:1.9rem}}
-
-/* Consistent enterprise service card and CTA alignment */
-.services-grid-blue .container,.services-grid-white .container,.offerings-grid{align-items:stretch}
-.service-item,.offering-item{display:flex;flex-direction:column;min-width:0;height:100%}
-.service-item h3,.offering-item h3{min-height:3.9rem;line-height:1.3;margin-bottom:15px}
-.service-item p{min-height:4.9rem}
-.service-item ul{flex:1}
-.service-item .btn,.offering-item .btn{box-sizing:border-box;width:100%;max-width:100%;min-height:52px;margin-top:auto;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 14px;line-height:1.35;white-space:normal}
-.offering-item p{flex:1}
-.offering-item .btn{margin-top:24px}
-@media(max-width:650px){.service-item h3,.offering-item h3,.service-item p{min-height:0}}
-
-/* Refined typography and uniform action sizing — October 2026 */
-.hero-section h1{font-size:clamp(1.95rem,3.5vw,3rem);line-height:1.17}
-.hero-section p{font-size:clamp(1rem,1.6vw,1.15rem)}
-.featured-content h2{font-size:clamp(1.55rem,2.4vw,2rem);line-height:1.25}
-.section-heading,.extensive-offerings h2{font-size:clamp(1.65rem,2.6vw,2.1rem);line-height:1.25}
-.service-item h3,.offering-item h3{font-size:1.18rem;line-height:1.35;min-height:3.2rem;margin:0 0 15px}
-.cta-section h2{font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.3}
-.hero-actions .btn,.cta-actions .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-width:240px;min-height:50px;padding:12px 18px;margin-top:14px;font-size:.95rem;line-height:1.3}
-.service-item .btn,.offering-item .btn{font-size:.94rem;min-height:50px}
-@media(max-width:650px){.service-item h3,.offering-item h3{min-height:0}.hero-actions .btn,.cta-actions .btn{width:100%;max-width:330px;min-width:0}}
-</style><title>Enterprise Technology Services | Elite Digital Consulting</title><meta content="Elite Digital Consulting delivers custom web and mobile applications, enterprise software, AI automation, DevOps, cloud engineering, Agile delivery and digital transformation services." name="description"/></head>
-
-
-
-<body><header>
-<div class="container">
-<div class="logo">Elite Digital Consulting</div>
-<nav aria-label="Main Navigation" class="navbar">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="our-services.html">Services</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</div>
+/* GENERAL */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color .3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* HERO */
+.hero-section {
+    background:
+        linear-gradient(rgba(0,29,65,.40),rgba(0,29,65,.45)),
+        url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 95px 20px;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0,20,43,.68);
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 850px;
+}
+
+.hero-section h1 {
+    font-size: clamp(1.95rem,3.5vw,3rem);
+    line-height: 1.17;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.hero-section p {
+    font-size: clamp(1rem,1.6vw,1.15rem);
+    margin: 0;
+}
+
+.hero-actions,
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* BUTTONS */
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background .3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #0056b3;
+    border: 1px solid #c8ddf5;
+}
+
+.btn-secondary:hover {
+    background: #e6f2ff;
+    color: #00458f;
+}
+
+.hero-actions .btn,
+.cta-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 240px;
+    min-height: 50px;
+    padding: 12px 18px;
+    margin-top: 14px;
+    font-size: .95rem;
+    line-height: 1.3;
+}
+
+/* INTRODUCTION */
+.intro-text-section {
+    background: #e6f2ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro-text-section p {
+    max-width: 950px;
+    margin: auto;
+    font-size: 1.2em;
+    color: #0056b3;
+}
+
+/* FEATURED APPROACH */
+.featured-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.featured-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.featured-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 355px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.featured-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.featured-content h2 {
+    color: #0056b3;
+    font-size: clamp(1.55rem,2.4vw,2rem);
+    line-height: 1.25;
+    margin: 0 0 20px;
+}
+
+.featured-content p {
+    margin-bottom: 20px;
+}
+
+.featured-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.featured-content li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.featured-content li::before {
+    content: '\2022';
+    color: #007bff;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+}
+
+.featured-content li strong {
+    color: #0056b3;
+}
+
+/* SERVICE GRIDS */
+.services-grid-blue,
+.services-grid-white {
+    padding: 60px 0;
+}
+
+.services-grid-blue {
+    background: #007bff;
+    color: #fff;
+}
+
+.services-grid-white {
+    background: #f8f8f8;
+}
+
+.services-grid-blue .container,
+.services-grid-white .container {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    text-align: left;
+}
+
+.services-grid-white .service-item {
+    background: #fff;
+    color: #333;
+    border: 1px solid #eee;
+}
+
+.service-item h3 {
+    font-size: 1.18rem;
+    line-height: 1.35;
+    min-height: 3.2rem;
+    margin: 0 0 15px;
+    color: inherit;
+}
+
+.service-item p {
+    min-height: 4.9rem;
+    margin: 0 0 15px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+.service-item li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.service-item li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.services-grid-white .service-item li::before {
+    color: #007bff;
+}
+
+.service-item .btn {
+    width: 100%;
+    min-height: 50px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 14px;
+    font-size: .94rem;
+    line-height: 1.35;
+    white-space: normal;
+}
+
+.services-grid-blue .service-item .btn {
+    background: #fff;
+    color: #0056b3;
+}
+
+.services-grid-blue .service-item .btn:hover {
+    background: #e6f2ff;
+}
+
+/* ENGAGEMENT MODELS */
+.extensive-offerings {
+    padding: 60px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.extensive-offerings h2 {
+    color: #0056b3;
+    font-size: clamp(1.65rem,2.6vw,2.1rem);
+    line-height: 1.25;
+    margin: 0 0 15px;
+}
+
+.section-lead {
+    max-width: 880px;
+    margin: 0 auto 36px;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.offering-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    height: 100%;
+    background: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.offering-item h3 {
+    color: #007bff;
+    font-size: 1.18rem;
+    line-height: 1.35;
+    min-height: 3.2rem;
+    margin: 0 0 15px;
+}
+
+.offering-item p {
+    flex: 1;
+    margin: 0;
+}
+
+.offering-item .btn {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 14px;
+    font-size: .94rem;
+    line-height: 1.35;
+    white-space: normal;
+}
+
+/* CALL TO ACTION */
+.cta-section {
+    background: #e6f2ff;
+    padding: 50px 20px;
+    text-align: center;
+    color: #0056b3;
+}
+
+.cta-section h2 {
+    font-size: clamp(1.5rem,2.5vw,2rem);
+    line-height: 1.3;
+}
+
+.cta-section p {
+    max-width: 930px;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+}
+
+/* ==================================================
+   UNIFIED FIVE-COLUMN FOOTER
+   ================================================== */
+footer {
+    background: #0056b3;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-size: 14px;
+}
+
+footer .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+footer .footer-content {
+    display: grid;
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(0,.9fr)
+        minmax(0,.9fr)
+        minmax(0,1.5fr)
+        minmax(0,.85fr);
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 35px;
+}
+
+footer .footer-col {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+footer .footer-col h3 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 24px;
+    margin: 0 0 20px;
+}
+
+footer .footer-col p,
+footer .footer-col li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer .footer-col p {
+    margin: 0 0 14px;
+    overflow-wrap: anywhere;
+}
+
+footer .footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-col li {
+    margin: 0 0 8px;
+}
+
+footer .footer-col a {
+    color: #fff;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+footer .footer-col a:hover {
+    color: #e6f2ff;
+    text-decoration: underline;
+}
+
+footer .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+footer .social-links a {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+footer .copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.25);
+    padding-top: 22px;
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    footer .footer-content {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .services-grid-blue .container,
+    .services-grid-white .container,
+    .offerings-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .featured-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-image,
+    .featured-content {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .services-grid-blue .container,
+    .services-grid-white .container,
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item h3,
+    .offering-item h3,
+    .service-item p {
+        min-height: 0;
+    }
+
+    .featured-image img {
+        height: 260px;
+    }
+
+    .hero-section {
+        min-height: 380px;
+    }
+
+    .hero-overlay {
+        padding: 25px 18px;
+    }
+
+    .hero-actions .btn,
+    .cta-actions .btn {
+        width: 100%;
+        max-width: 330px;
+        min-width: 0;
+    }
+
+    footer .container {
+        padding: 20px;
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    footer .footer-col {
+        text-align: center;
+    }
+
+    footer .footer-col h3 {
+        min-height: 0;
+        margin-bottom: 12px;
+    }
+
+    footer .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        padding: 80px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text-section p,
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .service-item,
+    .offering-item {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="logo">Elite Digital Consulting</div>
+
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="our-services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
+<!-- HERO -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <h1>Technology Solutions Built for Business Impact</h1>
 
+        <p>
+            Custom apps, enterprise software, cloud and DevOps,
+            AI automation, and expert technical delivery—built
+            around your goals.
+        </p>
 
+        <div class="hero-actions">
+            <a class="btn" href="contact.html">
+                Discuss Your Project
+            </a>
 
+            <a
+                class="btn btn-secondary"
+                href="https://wa.me/2348109917302?text=Hello%20Elite%20Digital%20Consulting%2C%20I%27d%20like%20to%20discuss%20a%20technology%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
 
+<!-- INTRODUCTION -->
+<section class="intro-text-section">
+    <div class="container">
+        <p>
+            From a first product idea to complex enterprise modernization,
+            Elite Digital Consulting brings together international project
+            experience, practical technical leadership, and experienced
+            Nigeria-based engineering and DevOps professionals to help
+            organizations design, build, launch, and evolve digital solutions.
+        </p>
+    </div>
+</section>
 
+<!-- OUR APPROACH -->
+<section class="featured-section">
+    <div class="container">
+        <div class="featured-item">
 
+            <div class="featured-image">
+                <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1100&q=85"
+                    alt="Technology professionals collaborating around a project table"
+                    loading="lazy"
+                >
+            </div>
 
-<section class="hero-section"><div class="hero-overlay"><h1>Technology Solutions Built for Business Impact</h1><p>Custom apps, enterprise software, cloud and DevOps, AI automation, and expert technical delivery—built around your goals.</p><div class="hero-actions"><a class="btn" href="contact.html">Discuss Your Project</a><a class="btn btn-secondary" href="https://wa.me/2348109917302?text=Hello%20Elite%20Digital%20Consulting%2C%20I%27d%20like%20to%20discuss%20a%20technology%20project." rel="noopener noreferrer" target="_blank">Chat on WhatsApp</a></div></div></section>
-<section class="intro-text-section"><div class="container"><p>From a first product idea to complex enterprise modernization, Elite Digital Consulting brings together international project experience, practical technical leadership, and experienced Nigeria-based engineering and DevOps professionals to help organizations design, build, launch, and evolve digital solutions.</p></div></section>
-<section class="featured-section"><div class="container"><div class="featured-item"><div class="featured-image"><img alt="Technology professionals collaborating around a project table" loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/></div><div class="featured-content"><h2>One Technology Partner. From Strategy to Scale.</h2><p>We work with business leaders, agencies, startups and established organizations that need more than a supplier: a dependable partner who understands both business objectives and technical execution.</p><ul><li><strong>Discover &amp; Plan:</strong> Clarify requirements, architecture, budgets, milestones and delivery risks.</li><li><strong>Design &amp; Engineer:</strong> Build intuitive experiences, robust applications, integrations and scalable platforms.</li><li><strong>Deliver &amp; Deploy:</strong> Coordinate Agile teams, testing, cloud environments, CI/CD and production releases.</li><li><strong>Support &amp; Improve:</strong> Maintain, optimize and extend solutions as your business evolves.</li></ul><a class="btn" href="about.html">Explore Our Experience</a></div></div></div></section>
-<section class="services-grid-blue" id="engineering"><div class="container"><div class="service-item"><h3>Custom Web Applications</h3><p>Purpose-built web platforms that streamline workflows and deliver excellent customer and employee experiences.</p><ul><li>Custom portals and dashboards</li><li>Frontend and backend engineering</li><li>APIs and system integrations</li><li>Secure, responsive applications</li></ul><a class="btn" href="contact.html">Build a Web Platform</a></div><div class="service-item"><h3>Mobile App Development</h3><p>Mobile applications designed around real user needs, business processes and long-term product growth.</p><ul><li>iOS and Android app projects</li><li>Cross-platform app development</li><li>UX flows and interactive prototypes</li><li>App integration and maintenance</li></ul><a class="btn" href="contact.html">Discuss Your App</a></div><div class="service-item"><h3>Enterprise Software &amp; Platforms</h3><p>Modernize critical operations with tailored software, connected systems and reliable digital infrastructure.</p><ul><li>Business process applications</li><li>Legacy system modernization</li><li>Internal tools and integrations</li><li>Architecture and technical planning</li></ul><a class="btn" href="contact.html">Plan Your Platform</a></div></div></section>
-<section class="services-grid-white"><div class="container"><div class="service-item"><h3>AI Solutions &amp; Automation</h3><p>Identify practical opportunities to improve productivity, customer service and information workflows using AI.</p><ul><li>AI-assisted business workflows</li><li>Chatbots and knowledge assistants</li><li>Process and document automation</li><li>AI feature and product integration</li></ul><a class="btn" href="contact.html">Explore AI Solutions</a></div><div class="service-item"><h3>DevOps, Cloud &amp; Infrastructure</h3><p>Strengthen delivery pipelines and operational reliability with experienced engineering and DevOps support.</p><ul><li>Cloud setup and migration planning</li><li>CI/CD and deployment automation</li><li>Infrastructure and monitoring</li><li>Performance and reliability support</li></ul><a class="btn" href="contact.html">Talk to Our Engineers</a></div><div class="service-item"><h3>Agile Technical Project Leadership</h3><p>Bring structure, transparency and technical oversight to cross-functional programs and delivery teams.</p><ul><li>Agile and Scrum coordination</li><li>Technical roadmaps and sprint plans</li><li>Stakeholder and vendor alignment</li><li>Quality assurance and release planning</li></ul><a class="btn" href="contact.html">Request Project Support</a></div></div></section>
-<section class="services-grid-blue"><div class="container"><div class="service-item"><h3>UI/UX &amp; Product Design</h3><p>Translate business requirements into clear, accessible interfaces that support user adoption and conversion.</p><ul><li>User journeys and wireframes</li><li>Product discovery and prototyping</li><li>Responsive interface design</li><li>Design systems and usability reviews</li></ul><a class="btn" href="contact.html">Design Your Product</a></div><div class="service-item"><h3>CMS &amp; Digital Experience</h3><p>Give your teams better control of websites, content, publishing workflows and connected digital experiences.</p><ul><li>CMS setup and customization</li><li>Content migration and governance</li><li>Website redesign and optimization</li><li>Editorial workflow integrations</li></ul><a class="btn" href="contact.html">Improve Your Website</a></div><div class="service-item"><h3>E-commerce &amp; Digital Commerce</h3><p>Create and improve online shopping experiences supported by dependable technology and business integrations.</p><ul><li>Online stores and marketplaces</li><li>Payment and checkout integration</li><li>Catalog and inventory workflows</li><li>Store performance optimization</li></ul><a class="btn" href="contact.html">Launch Your Store</a></div></div></section>
-<section class="services-grid-white"><div class="container"><div class="service-item"><h3>Cybersecurity &amp; Quality Support</h3><p>Embed sensible security, testing and operational controls into the development and delivery lifecycle.</p><ul><li>Security-aware development reviews</li><li>Access and configuration checks</li><li>Testing and quality assurance</li><li>Risk identification and remediation plans</li></ul><a class="btn" href="contact.html">Discuss Your Needs</a></div><div class="service-item"><h3>Digital Strategy &amp; Consulting</h3><p>Connect technology decisions with commercial priorities, customer experience and measurable business value.</p><ul><li>Technology and product roadmaps</li><li>Business analysis and discovery</li><li>Digital transformation planning</li><li>Technical due diligence support</li></ul><a class="btn" href="contact.html">Book a Project Discussion</a></div><div class="service-item"><h3>Maintenance &amp; Managed Support</h3><p>Keep digital products dependable after launch through ongoing improvements and responsive technical support.</p><ul><li>Application updates and maintenance</li><li>Bug fixing and performance tuning</li><li>Monitoring and operational support</li><li>Feature enhancement and scaling</li></ul><a class="btn" href="contact.html">Arrange Ongoing Support</a></div></div></section>
-<section class="extensive-offerings" id="delivery"><div class="container"><h2>Flexible Engagement Models for Complex Projects</h2><p class="section-lead">Whether you need a complete product team or experienced specialists working alongside your existing people, we tailor the engagement to the scope and stage of your project.</p><div class="offerings-grid"><div class="offering-item"><h3>End-to-End Product Delivery</h3><p>From discovery and prototype to launch, we coordinate design, engineering, testing and deployment around an agreed roadmap.</p><a class="btn" href="contact.html">Start a Product Project</a></div><div class="offering-item"><h3>Dedicated Technical Expertise</h3><p>Access frontend, backend, DevOps and technical project management capabilities for defined workstreams and delivery needs.</p><a class="btn" href="contact.html">Discuss Team Support</a></div><div class="offering-item"><h3>Platform Modernization &amp; Growth</h3><p>Improve existing systems, connect business tools, automate workflows and prepare digital platforms for their next stage.</p><a class="btn" href="contact.html">Plan Your Next Phase</a></div></div></div></section>
-<section class="cta-section"><div class="container"><h2>Have a Complex Technology Challenge? Let's Solve It Together.</h2><p>Tell us what you are building, modernizing or struggling to deliver. We'll discuss your objectives and identify a sensible next step—from a focused technical review to a full development engagement.</p><div class="cta-actions"><a class="btn" href="contact.html">Request a Project Discussion</a><a class="btn" href="https://wa.me/2348109917302?text=Hello%20Elite%20Digital%20Consulting%2C%20I%27d%20like%20to%20discuss%20a%20project." rel="noopener noreferrer" target="_blank">WhatsApp Our Team</a></div></div></section>
+            <div class="featured-content">
+                <h2>One Technology Partner. From Strategy to Scale.</h2>
+
+                <p>
+                    We work with business leaders, agencies, startups and
+                    established organizations that need more than a supplier:
+                    a dependable partner who understands both business
+                    objectives and technical execution.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Discover &amp; Plan:</strong>
+                        Clarify requirements, architecture, budgets,
+                        milestones and delivery risks.
+                    </li>
+                    <li>
+                        <strong>Design &amp; Engineer:</strong>
+                        Build intuitive experiences, robust applications,
+                        integrations and scalable platforms.
+                    </li>
+                    <li>
+                        <strong>Deliver &amp; Deploy:</strong>
+                        Coordinate Agile teams, testing, cloud environments,
+                        CI/CD and production releases.
+                    </li>
+                    <li>
+                        <strong>Support &amp; Improve:</strong>
+                        Maintain, optimize and extend solutions
+                        as your business evolves.
+                    </li>
+                </ul>
+
+                <a class="btn" href="about.html">
+                    Explore Our Experience
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING SERVICES -->
+<section class="services-grid-blue" id="engineering">
+    <div class="container">
+
+        <div class="service-item">
+            <h3>Custom Web Applications</h3>
+            <p>
+                Purpose-built web platforms that streamline workflows
+                and deliver excellent customer and employee experiences.
+            </p>
+            <ul>
+                <li>Custom portals and dashboards</li>
+                <li>Frontend and backend engineering</li>
+                <li>APIs and system integrations</li>
+                <li>Secure, responsive applications</li>
+            </ul>
+            <a class="btn" href="contact.html">Build a Web Platform</a>
+        </div>
+
+        <div class="service-item">
+            <h3>Mobile App Development</h3>
+            <p>
+                Mobile applications designed around real user needs,
+                business processes and long-term product growth.
+            </p>
+            <ul>
+                <li>iOS and Android app projects</li>
+                <li>Cross-platform app development</li>
+                <li>UX flows and interactive prototypes</li>
+                <li>App integration and maintenance</li>
+            </ul>
+            <a class="btn" href="contact.html">Discuss Your App</a>
+        </div>
+
+        <div class="service-item">
+            <h3>Enterprise Software &amp; Platforms</h3>
+            <p>
+                Modernize critical operations with tailored software,
+                connected systems and reliable digital infrastructure.
+            </p>
+            <ul>
+                <li>Business process applications</li>
+                <li>Legacy system modernization</li>
+                <li>Internal tools and integrations</li>
+                <li>Architecture and technical planning</li>
+            </ul>
+            <a class="btn" href="contact.html">Plan Your Platform</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- AI, CLOUD AND PROJECT LEADERSHIP -->
+<section class="services-grid-white">
+    <div class="container">
+
+        <div class="service-item">
+            <h3>AI Solutions &amp; Automation</h3>
+            <p>
+                Identify practical opportunities to improve productivity,
+                customer service and information workflows using AI.
+            </p>
+            <ul>
+                <li>AI-assisted business workflows</li>
+                <li>Chatbots and knowledge assistants</li>
+                <li>Process and document automation</li>
+                <li>AI feature and product integration</li>
+            </ul>
+            <a class="btn" href="contact.html">Explore AI Solutions</a>
+        </div>
+
+        <div class="service-item">
+            <h3>DevOps, Cloud &amp; Infrastructure</h3>
+            <p>
+                Strengthen delivery pipelines and operational reliability
+                with experienced engineering and DevOps support.
+            </p>
+            <ul>
+                <li>Cloud setup and migration planning</li>
+                <li>CI/CD and deployment automation</li>
+                <li>Infrastructure and monitoring</li>
+                <li>Performance and reliability support</li>
+            </ul>
+            <a class="btn" href="contact.html">Talk to Our Engineers</a>
+        </div>
+
+        <div class="service-item">
+            <h3>Agile Technical Project Leadership</h3>
+            <p>
+                Bring structure, transparency and technical oversight
+                to cross-functional programs and delivery teams.
+            </p>
+            <ul>
+                <li>Agile and Scrum coordination</li>
+                <li>Technical roadmaps and sprint plans</li>
+                <li>Stakeholder and vendor alignment</li>
+                <li>Quality assurance and release planning</li>
+            </ul>
+            <a class="btn" href="contact.html">Request Project Support</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- DESIGN AND DIGITAL COMMERCE -->
+<section class="services-grid-blue">
+    <div class="container">
+
+        <div class="service-item">
+            <h3>UI/UX &amp; Product Design</h3>
+            <p>
+                Translate business requirements into clear,
+                accessible interfaces that support user adoption
+                and conversion.
+            </p>
+            <ul>
+                <li>User journeys and wireframes</li>
+                <li>Product discovery and prototyping</li>
+                <li>Responsive interface design</li>
+                <li>Design systems and usability reviews</li>
+            </ul>
+            <a class="btn" href="contact.html">Design Your Product</a>
+        </div>
+
+        <div class="service-item">
+            <h3>CMS &amp; Digital Experience</h3>
+            <p>
+                Give your teams better control of websites, content,
+                publishing workflows and connected digital experiences.
+            </p>
+            <ul>
+                <li>CMS setup and customization</li>
+                <li>Content migration and governance</li>
+                <li>Website redesign and optimization</li>
+                <li>Editorial workflow integrations</li>
+            </ul>
+            <a class="btn" href="contact.html">Improve Your Website</a>
+        </div>
+
+        <div class="service-item">
+            <h3>E-commerce &amp; Digital Commerce</h3>
+            <p>
+                Create and improve online shopping experiences supported
+                by dependable technology and business integrations.
+            </p>
+            <ul>
+                <li>Online stores and marketplaces</li>
+                <li>Payment and checkout integration</li>
+                <li>Catalog and inventory workflows</li>
+                <li>Store performance optimization</li>
+            </ul>
+            <a class="btn" href="contact.html">Launch Your Store</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECURITY, STRATEGY AND SUPPORT -->
+<section class="services-grid-white">
+    <div class="container">
+
+        <div class="service-item">
+            <h3>Cybersecurity &amp; Quality Support</h3>
+            <p>
+                Embed sensible security, testing and operational controls
+                into the development and delivery lifecycle.
+            </p>
+            <ul>
+                <li>Security-aware development reviews</li>
+                <li>Access and configuration checks</li>
+                <li>Testing and quality assurance</li>
+                <li>Risk identification and remediation plans</li>
+            </ul>
+            <a class="btn" href="contact.html">Discuss Your Needs</a>
+        </div>
+
+        <div class="service-item">
+            <h3>Digital Strategy &amp; Consulting</h3>
+            <p>
+                Connect technology decisions with commercial priorities,
+                customer experience and measurable business value.
+            </p>
+            <ul>
+                <li>Technology and product roadmaps</li>
+                <li>Business analysis and discovery</li>
+                <li>Digital transformation planning</li>
+                <li>Technical due diligence support</li>
+            </ul>
+            <a class="btn" href="contact.html">Book a Project Discussion</a>
+        </div>
+
+        <div class="service-item">
+            <h3>Maintenance &amp; Managed Support</h3>
+            <p>
+                Keep digital products dependable after launch through
+                ongoing improvements and responsive technical support.
+            </p>
+            <ul>
+                <li>Application updates and maintenance</li>
+                <li>Bug fixing and performance tuning</li>
+                <li>Monitoring and operational support</li>
+                <li>Feature enhancement and scaling</li>
+            </ul>
+            <a class="btn" href="contact.html">Arrange Ongoing Support</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ENGAGEMENT MODELS -->
+<section class="extensive-offerings" id="delivery">
+    <div class="container">
+
+        <h2>Flexible Engagement Models for Complex Projects</h2>
+
+        <p class="section-lead">
+            Whether you need a complete product team or experienced
+            specialists working alongside your existing people,
+            we tailor the engagement to the scope and stage of your project.
+        </p>
+
+        <div class="offerings-grid">
+
+            <div class="offering-item">
+                <h3>End-to-End Product Delivery</h3>
+                <p>
+                    From discovery and prototype to launch,
+                    we coordinate design, engineering, testing and deployment
+                    around an agreed roadmap.
+                </p>
+                <a class="btn" href="contact.html">
+                    Start a Product Project
+                </a>
+            </div>
+
+            <div class="offering-item">
+                <h3>Dedicated Technical Expertise</h3>
+                <p>
+                    Access frontend, backend, DevOps and technical
+                    project management capabilities for defined
+                    workstreams and delivery needs.
+                </p>
+                <a class="btn" href="contact.html">
+                    Discuss Team Support
+                </a>
+            </div>
+
+            <div class="offering-item">
+                <h3>Platform Modernization &amp; Growth</h3>
+                <p>
+                    Improve existing systems, connect business tools,
+                    automate workflows and prepare digital platforms
+                    for their next stage.
+                </p>
+                <a class="btn" href="contact.html">
+                    Plan Your Next Phase
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+    <div class="container">
+
+        <h2>
+            Have a Complex Technology Challenge?
+            Let's Solve It Together.
+        </h2>
+
+        <p>
+            Tell us what you are building, modernizing or struggling
+            to deliver. We'll discuss your objectives and identify
+            a sensible next step—from a focused technical review
+            to a full development engagement.
+        </p>
+
+        <div class="cta-actions">
+            <a class="btn" href="contact.html">
+                Request a Project Discussion
+            </a>
+
+            <a
+                class="btn"
+                href="https://wa.me/2348109917302?text=Hello%20Elite%20Digital%20Consulting%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp Our Team
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- UNIFIED WEBSITE FOOTER -->
 <footer>
-<div class="container">
-<div class="footer-content">
-<div class="footer-col">
-<h3>Elite Digital Consulting</h3>
-<p>Technology expertise. Reliable delivery. Lasting partnerships.</p>
-</div>
-<div class="footer-col">
-<h3>Quick Links</h3>
-<ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="our-services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul>
-</div>
-<div class="footer-col">
-<h3>Contact Info</h3>
+    <div class="container">
+        <div class="footer-content">
 
+            <!-- COMPANY -->
+            <div class="footer-col">
+                <h3>Elite Digital Consulting</h3>
 
+                <p>
+                    Technology consulting, software engineering,
+                    DevOps and digital delivery.
+                </p>
+            </div>
 
-<p>Tina Johnson Close, Coastal Road Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p><p>Email: <a href="mailto:info@elitedigitalglobalconsulting.com">info@elitedigitalglobalconsulting.com</a></p><p>WhatsApp: <a href="https://wa.me/2348109917302" rel="noopener noreferrer" target="_blank">+234 810 991 7302</a></p></div>
-<div class="footer-col">
-<h3>Follow Us</h3>
-<div class="social-links">
-<a aria-label="Facebook" href="https://www.facebook.com/elite_consulting_official/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a aria-label="TikTok" href="https://www.tiktok.com/@eliteconsulting_official" target="_blank"><i class="fab fa-tiktok"></i></a>
-<a aria-label="Twitter" href="https://www.twitter.com/@eliteconsulting_official" target="_blank"><i class="fab fa-twitter"></i></a>
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
 
-<a aria-label="Instagram" href="https://www.instagram.com/elite_consulting_official/" target="_blank"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-</div>
-<div class="copyright">© 2026 Elite Digital Consulting. All rights reserved.</div>
-</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="our-services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- TERMS -->
+            <div class="footer-col">
+                <h3>Terms</h3>
+
+                <ul>
+                    <li>
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="terms-and-conditions.html">
+                            Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="refund-policy.html">
+                            Refund Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://elitetravelstudywork.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Elite Travel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Get a Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+
+                <p>
+                    Tina Johnson Close, Coastal Road,
+                    Salem Okun-Ajah, beside Avista Beach,
+                    Lekki-Epe Expressway, Eti-Osa LGA,
+                    Lagos 106104, Nigeria
+                </p>
+
+                <p>
+                    Email:
+                    <a href="mailto:info@elitedigitalglobalconsulting.com">
+                        info@elitedigitalglobalconsulting.com
+                    </a>
+                </p>
+
+                <p>
+                    WhatsApp:
+                    <a
+                        href="https://wa.me/2348109917302"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        +234 810 991 7302
+                    </a>
+                </p>
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.facebook.com/elite_consulting_official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@eliteconsulting_official"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok"
+                    >
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/elite_consulting_official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Elite Digital Consulting.
+            All rights reserved.
+        </div>
+
+    </div>
 </footer>
+
 </body>
 </html>

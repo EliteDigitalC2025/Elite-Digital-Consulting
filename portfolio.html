@@ -1,448 +1,520 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio & Experience | Elite Digital Consulting</title>
-    <meta name="description" content="Explore digital platforms delivered by Elite Digital Consulting and international brand experience across software engineering, digital content and technology delivery.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio & Experience | Elite Digital Consulting</title>
+<meta name="description" content="Explore digital platforms delivered by Elite Digital Consulting and international brand experience across software engineering, digital content and technology delivery.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
-        /* General Body and Container Styling (Copied from your existing CSS) */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-        }
+<style>
+/* GENERAL */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+/* HEADER */
+header {
+    background: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color .3s ease;
+}
+nav ul li a:hover {
+    color: #007bff;
+}
 
-        /* Header Styling (Copied from your existing CSS) */
-        header {
-            background-color: #f8f8f8;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
+/* PORTFOLIO HERO */
+.portfolio-hero-section {
+    background:
+        url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 75px 20px;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-hero-section .hero-overlay {
+    background: rgba(0,0,0,.5);
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 800px;
+}
+.portfolio-hero-section h1 {
+    font-size: clamp(2rem,3.4vw,2.65rem);
+    line-height: 1.18;
+    letter-spacing: .015em;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+.portfolio-hero-section p {
+    font-size: clamp(1rem,1.6vw,1.15rem);
+    margin: 0;
+}
 
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* INTRODUCTION */
+.intro-text-section {
+    background: #e6f2ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+.intro-text-section p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #0056b3;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #0056b3;
-        }
+/* PROJECTS */
+.projects-grid-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+.projects-grid-section h2 {
+    color: #0056b3;
+    font-size: clamp(1.55rem,2.5vw,1.9rem);
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+.section-lead {
+    max-width: 780px;
+    margin: -18px auto 36px;
+    color: #555;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+.project-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+.project-item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #e6f2ff;
+}
+.project-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    padding: 26px;
+}
+.project-category {
+    display: block;
+    color: #0056b3;
+    font-size: .78em;
+    font-weight: 700;
+    letter-spacing: .055em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    min-height: 3.2em;
+}
+.project-content h3 {
+    color: #007bff;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    min-height: 3.1em;
+    margin: 0;
+}
+.project-content p {
+    flex: 1;
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.65;
+    color: #555;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background .3s ease;
+}
+.btn:hover {
+    background: #0056b3;
+}
+.project-content .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 14px;
+    margin-top: auto;
+    line-height: 1.3;
+    font-size: .9rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: normal;
+}
 
-        nav ul li {
-            margin-left: 20px;
-        }
+/* INTERNATIONAL EXPERIENCE */
+.experience-section {
+    background: #e6f2ff;
+    text-align: center;
+    padding: 65px 0;
+    overflow: hidden;
+}
+.experience-section h2,
+.delivery-section h2 {
+    color: #0056b3;
+    font-size: clamp(1.55rem,2.5vw,1.9rem);
+    line-height: 1.3;
+}
+.experience-section .container > p {
+    max-width: 920px;
+    margin: 0 auto 18px;
+}
+.experience-note {
+    font-size: .88em;
+    color: #526575;
+}
+.brand-marquee {
+    overflow: hidden;
+    margin-top: 32px;
+    -webkit-mask-image: linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);
+    mask-image: linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);
+}
+.brand-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: brand-scroll 42s linear infinite;
+}
+.brand-track span {
+    flex: 0 0 auto;
+    background: #fff;
+    border: 1px solid #d9e8f6;
+    padding: 15px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #0056b3;
+    white-space: nowrap;
+}
+.brand-marquee:hover .brand-track {
+    animation-play-state: paused;
+}
+@keyframes brand-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+/* DELIVERY */
+.delivery-section {
+    padding: 65px 0;
+    text-align: center;
+}
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 24px;
+    margin-top: 30px;
+    text-align: left;
+}
+.delivery-grid > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f4f7fb;
+    border-radius: 8px;
+    padding: 28px;
+}
+.delivery-grid h3 {
+    color: #0056b3;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    min-height: 2.8em;
+    margin: 0 0 10px;
+}
+.delivery-grid p {
+    margin-top: 0;
+}
 
-        nav ul li a:hover {
-            color: #007bff;
-        }
+/* CALL TO ACTION */
+.cta-section {
+    background: #e6f2ff;
+    padding: 50px 20px;
+    text-align: center;
+    color: #0056b3;
+}
+.cta-section h2 {
+    font-size: clamp(1.55rem,2.5vw,1.9rem);
+    line-height: 1.3;
+    margin-top: 0;
+}
+.cta-section p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    font-size: 1.15em;
+}
+.cta-section .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 225px;
+    min-height: 50px;
+    margin: 6px;
+    font-size: .92rem;
+    text-align: center;
+}
+.btn-outline {
+    background: #0056b3;
+}
 
-        /* Hero Section for Portfolio Page */
-        .portfolio-hero-section {
-            /* Replace with an appropriate banner image for Portfolio, or reuse one */
-            background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') no-repeat center center/cover; /* Reusing your services banner image */
-            color: #fff;
-            text-align: center;
-            padding: 120px 20px; /* Consistent height with other large banners */
-            position: relative;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* ==================================================
+   UNIFIED FIVE-COLUMN FOOTER
+   Same design as Contact and Services pages
+   ================================================== */
+footer {
+    background: #0056b3;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-size: 14px;
+}
+footer .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+footer .footer-content {
+    display: grid;
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(0,.9fr)
+        minmax(0,.9fr)
+        minmax(0,1.5fr)
+        minmax(0,.85fr);
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 35px;
+}
+footer .footer-col {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+footer .footer-col h3 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 24px;
+    margin: 0 0 20px;
+}
+footer .footer-col p,
+footer .footer-col li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+footer .footer-col p {
+    margin: 0 0 14px;
+    overflow-wrap: anywhere;
+}
+footer .footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer .footer-col li {
+    margin: 0 0 8px;
+}
+footer .footer-col a {
+    color: #fff;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+footer .footer-col a:hover {
+    color: #e6f2ff;
+    text-decoration: underline;
+}
+footer .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+footer .social-links a {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.5;
+}
+footer .copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.25);
+    padding-top: 22px;
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
 
-        .portfolio-hero-section .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 40px 20px;
-            border-radius: 8px;
-            max-width: 800px;
-        }
-
-        .portfolio-hero-section h1 {
-            font-size: 3.8em;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            line-height: 1.2;
-        }
-
-        .portfolio-hero-section p {
-            font-size: 1.4em;
-            margin-top: 0;
-        }
-
-        /* Intro Text Section (Copied from existing for consistent intro styling) */
-        .intro-text-section {
-            background-color: #e6f2ff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .intro-text-section p {
-            font-size: 1.2em;
-            font-style: italic;
-            color: #0056b3;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Project Grid Section (NEW) */
-        .projects-grid-section {
-            padding: 60px 0;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .projects-grid-section h2 {
-            color: #0056b3;
-            font-size: 2.8em;
-            margin-bottom: 40px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for projects */
-            gap: 30px;
-        }
-
-        .project-item {
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-
-        .project-item img {
-            width: 100%;
-            height: 250px; /* Fixed height for consistent project image display */
-            object-fit: cover; /* Ensures images cover the area without distortion */
-        }
-
-        .project-content {
-            padding: 20px;
-        }
-
-        .project-content h3 {
-            color: #007bff;
-            font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .project-content p {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* Buttons (Copied from existing for consistency) */
-        .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            margin-top: 0; /* Adjust if button needs margin-top within project-item */
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Call to Action Section (Copied from existing) */
-        .cta-section {
-            background-color: #e6f2ff;
-            padding: 50px 20px;
-            text-align: center;
-            color: #0056b3;
-        }
-
-        .cta-section p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-
-        /* Footer Styling (Copied from your existing CSS) */
-        footer {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 40px 0 20px;
-            font-size: 0.9em;
-        }
-
-        footer .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-col {
-            flex: 1;
-            min-width: 200px;
-            max-width: 280px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.2em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-col ul li a {
-            text-decoration: none;
-            color: #e0e0e0;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: #fff;
-        }
-
-        .footer-col p {
-            margin-bottom: 10px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 20px;
-        }
-
-        /* Responsive Design (Copied from common media queries) */
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 5px 10px;
-            }
-
-            .portfolio-hero-section h1 {
-                font-size: 2.8em;
-            }
-
-            .portfolio-hero-section p {
-                font-size: 1.1em;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr; /* Single column on small screens */
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-col {
-                text-align: center;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 20px;
-            }
-
-            .portfolio-hero-section {
-                padding: 80px 15px;
-            }
-
-            .portfolio-hero-section h1 {
-                font-size: 2.2em;
-            }
-
-            .portfolio-hero-section p {
-                font-size: 1em;
-            }
-
-            .intro-text-section p, .cta-section p {
-                font-size: 1em;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-
-            .project-item {
-                padding: 0; /* Remove padding if added on item level for mobile */
-            }
-            .project-content {
-                padding: 15px; /* Adjust content padding on mobile */
-            }
-        }
-        /* Portfolio refinements: retain the existing blue-and-white identity */
-        *, *::before, *::after { box-sizing: border-box; }
-        .projects-grid { align-items: stretch; }
-        .project-item { display:flex; flex-direction:column; min-width:0; }
-        .project-item img { display:block; height:240px; background:#e6f2ff; }
-        .project-content { display:flex; flex:1; flex-direction:column; padding:26px; }
-        .project-content h3 { font-size:1.5em; line-height:1.3; min-height:2.6em; }
-        .project-content p { flex:1; }
-        .project-content .btn { align-self:flex-start; margin-top:auto; }
-        .project-category { display:block; color:#0056b3; font-size:.78em; font-weight:700; letter-spacing:.055em; text-transform:uppercase; margin-bottom:12px; }
-        .section-lead { max-width:780px; margin:-18px auto 36px; color:#555; }
-        .experience-section { background:#e6f2ff; text-align:center; padding:65px 0; overflow:hidden; }
-        .experience-section h2, .delivery-section h2 { color:#0056b3; font-size:2.3em; line-height:1.2; }
-        .experience-section .container > p { max-width:920px; margin:0 auto 18px; }
-        .experience-note { font-size:.88em; color:#526575; }
-        .brand-marquee { overflow:hidden; margin-top:32px; mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent); }
-        .brand-track { display:flex; gap:15px; width:max-content; animation:brand-scroll 42s linear infinite; }
-        .brand-track span { flex:0 0 auto; background:white; border:1px solid #d9e8f6; padding:15px 22px; border-radius:6px; font-weight:700; color:#0056b3; white-space:nowrap; }
-        .brand-marquee:hover .brand-track { animation-play-state:paused; }
-        @keyframes brand-scroll { to { transform:translateX(-50%); } }
-        .delivery-section { padding:65px 0; text-align:center; }
-        .delivery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:30px; text-align:left; }
-        .delivery-grid > div { background:#f4f7fb; border-radius:8px; padding:28px; }
-        .delivery-grid h3 { color:#0056b3; margin-top:0; }
-        .cta-section h2 { font-size:2.3em; margin-top:0; }
-        .cta-section p { max-width:850px; margin:0 auto 25px; font-size:1.15em; }
-        .btn-outline { background:#0056b3; margin-left:10px; }
-        @media(max-width:768px) { .delivery-grid { grid-template-columns:1fr; } .project-content h3 { min-height:0; } .experience-section h2,.delivery-section h2 { font-size:1.8em; } }
-        /* Exact card alignment: identical category, heading, copy and CTA tracks. */
-        .projects-grid { grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch; }
-        .project-item { height:100%; }
-        .project-content {
-            display:grid;
-            grid-template-rows: 3.3em 3.3em minmax(7.5em,1fr) auto;
-            align-content:stretch;
-            gap:12px;
-            flex:1;
-            min-width:0;
-        }
-        .project-category { margin:0; line-height:1.55; align-self:start; }
-        .project-content h3 { margin:0; min-height:0; line-height:1.3; align-self:start; }
-        .project-content p { margin:0; min-height:0; align-self:start; }
-        .project-content .btn { margin:0; align-self:end; justify-self:start; text-align:center; }
-        @media(max-width:1050px) and (min-width:701px) {
-            .projects-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-        }
-        @media(max-width:700px) {
-            .projects-grid { grid-template-columns:1fr; }
-            .project-content { grid-template-rows:auto auto 1fr auto; gap:12px; }
-        }
-        /* Uniform CTA dimensions across all six portfolio cards. */
-        .project-content .btn {
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            justify-self:stretch;
-            align-self:end;
-            width:100%;
-            min-height:56px;
-            box-sizing:border-box;
-            padding:12px 14px;
-            margin:0;
-            line-height:1.3;
-            font-size:1rem;
-            font-weight:600;
-            text-align:center;
-            white-space:normal;
-        }
-        @media(max-width:700px) {
-            .project-content .btn { min-height:52px; }
-        }
-        @media(prefers-reduced-motion:reduce) { .brand-track { animation:none; flex-wrap:wrap; width:auto; justify-content:center; } }
-    
-/* 2026 refined typography and precise portfolio card alignment */
-.portfolio-hero-section{min-height:380px;padding:75px 20px}
-.portfolio-hero-section h1{font-size:clamp(2rem,3.4vw,2.65rem);line-height:1.18;letter-spacing:.015em}
-.portfolio-hero-section p{font-size:clamp(1rem,1.6vw,1.15rem)}
-.projects-grid-section h2,.experience-section h2,.delivery-section h2,.cta-section h2{font-size:clamp(1.55rem,2.5vw,1.9rem);line-height:1.3}
-.project-content h3{font-size:1.125rem;line-height:1.35}
-.delivery-grid h3{font-size:1.125rem;line-height:1.35}
-.project-content{display:flex;flex-direction:column;gap:12px;min-height:0}
-.project-category{min-height:3.2em;margin:0;line-height:1.5}
-.project-content h3{min-height:3.1em;margin:0}
-.project-content p{flex:1;margin:0;font-size:.94rem;line-height:1.65}
-.project-content .btn{width:100%;min-height:52px;font-size:.9rem;padding:12px 14px;margin-top:auto;align-self:stretch}
-.delivery-grid>div{display:flex;flex-direction:column;height:100%}
-.delivery-grid h3{min-height:2.8em;margin-bottom:10px}
-.delivery-grid p{margin-top:0}
-.cta-section .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;min-width:225px;margin:6px;font-size:.92rem;text-align:center}
-@media(max-width:700px){.project-category,.project-content h3,.delivery-grid h3{min-height:0}.portfolio-hero-section{min-height:300px;padding:65px 18px}.project-content .btn{min-height:50px}}
+/* RESPONSIVE */
+@media (max-width: 1050px) {
+    .projects-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (max-width: 1000px) {
+    footer .footer-content {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .delivery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-category,
+    .project-content h3,
+    .delivery-grid h3 {
+        min-height: 0;
+    }
+    .portfolio-hero-section {
+        min-height: 300px;
+        padding: 65px 18px;
+    }
+    .project-content .btn {
+        min-height: 50px;
+    }
+}
+@media (max-width: 650px) {
+    footer .container {
+        padding: 20px;
+    }
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+    footer .footer-col {
+        text-align: center;
+    }
+    footer .footer-col h3 {
+        min-height: 0;
+        margin-bottom: 12px;
+    }
+    footer .social-links {
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .intro-text-section p,
+    .cta-section p {
+        font-size: 1em;
+    }
+    .project-content {
+        padding: 15px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .brand-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: auto;
+        justify-content: center;
+    }
+}
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 <header>
     <div class="container">
         <div class="logo">Elite Digital Consulting</div>
+
         <nav class="navbar" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -455,149 +527,471 @@
     </div>
 </header>
 
-    <section class="portfolio-hero-section">
-        <div class="hero-overlay">
-            <h1>SELECTED WORK &amp; EXPERIENCE</h1>
-            <p>Digital platforms, international brand experience and technology delivery grounded in real-world execution.</p>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="portfolio-hero-section">
+    <div class="hero-overlay">
+        <h1>SELECTED WORK &amp; EXPERIENCE</h1>
+        <p>
+            Digital platforms, international brand experience
+            and technology delivery grounded in real-world execution.
+        </p>
+    </div>
+</section>
 
-    <section class="intro-text-section">
-        <div class="container">
-            <p>"From websites we have delivered to complex digital initiatives supported through agency and in-house roles, our experience brings together technology, content, strategy and accountable execution."</p>
-        </div>
-    </section>
+<!-- INTRODUCTION -->
+<section class="intro-text-section">
+    <div class="container">
+        <p>
+            "From websites we have delivered to complex digital initiatives
+            supported through agency and in-house roles, our experience
+            brings together technology, content, strategy
+            and accountable execution."
+        </p>
+    </div>
+</section>
 
-    <section class="projects-grid-section">
-        <div class="container">
-            <h2>Selected Projects &amp; Delivery Capabilities</h2>
-            <p class="section-lead">Explore examples of our own website delivery alongside the capabilities shaped by international professional and agency experience.</p>
-            <div class="projects-grid">
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing Elite Travel Study Work Services" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">Website Development &amp; Digital Experience</span>
-                        <h3>Elite Travel Study Work Services</h3>
-                        <p>A dedicated travel, study and work services website designed to present complex offerings clearly, guide visitors through services and make enquiries straightforward.</p>
-                        <a href="https://elitetravelstudywork.com/" class="btn" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing GrandSignature Properties" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">Real Estate Website &amp; Brand Presence</span>
-                        <h3>GrandSignature Properties</h3>
-                        <p>A property-focused digital presence developed to communicate real estate offerings, build brand credibility and connect prospective clients with the business.</p>
-                        <a href="contact.html" class="btn">Discuss Similar Work</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing Enterprise Website &amp; Platform Engineering" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">Frontend, Backend &amp; CMS Delivery</span>
-                        <h3>Enterprise Website &amp; Platform Engineering</h3>
-                        <p>Experience building and maintaining responsive websites, content-managed experiences and connected digital platforms, with attention to quality and scalability.</p>
-                        <a href="contact.html" class="btn">Discuss Your Platform</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing Technical Project Leadership" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">Agile, Scrum &amp; Cross-Functional Delivery</span>
-                        <h3>Technical Project Leadership</h3>
-                        <p>Coordinating requirements, engineering priorities, stakeholders and delivery workflows across multidisciplinary teams and international digital environments.</p>
-                        <a href="contact.html" class="btn">Request a Project Discussion</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing Digital Content &amp; Brand Experiences" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">CMS Operations &amp; Digital Campaign Delivery</span>
-                        <h3>Digital Content &amp; Brand Experiences</h3>
-                        <p>Professional experience supporting brand-led digital content, website operations and cross-functional execution within agency and corporate environments.</p>
-                        <a href="our-services.html" class="btn">Explore Our Services</a>
-                    </div>
-                </article>
-                <article class="project-item">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="Professional imagery representing Cloud, DevOps &amp; Product Development" loading="lazy">
-                    <div class="project-content">
-                        <span class="project-category">Engineering Support &amp; Scalable Systems</span>
-                        <h3>Cloud, DevOps &amp; Product Development</h3>
-                        <p>Our Nigeria-based technical network supports modern application development, cloud and DevOps workflows, deployment processes and ongoing platform improvement.</p>
-                        <a href="contact.html" class="btn">Talk to Our Team</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-    <section class="experience-section">
-        <div class="container">
-            <h2>International Brands &amp; Organizations Behind Our Experience</h2>
-            <p>Our professional and agency-delivered experience includes work involving Samsung, Cheil Germany, Hochschule Fresenius, Masterplan, Elanco, CtrlQS, Henkel, NIVEA, IWC Schaffhausen, Ottobock and GROHE. Our own website projects also include Elite Travel Study Work Services and GrandSignature Properties.</p>
-            <p class="experience-note">These references reflect experience gained across agency, employment and independent project settings; they do not imply that every organization directly contracted Elite Digital Consulting.</p>
-            <div class="brand-marquee" aria-label="Organizations and brands represented in our experience">
-                <div class="brand-track"><span>Samsung</span><span>Cheil Germany</span><span>Hochschule Fresenius</span><span>Masterplan</span><span>Elanco</span><span>CtrlQS</span><span>Henkel</span><span>NIVEA</span><span>IWC Schaffhausen</span><span>Ottobock</span><span>GROHE</span><span>Elite Travel Study Work Services</span><span>GrandSignature Properties</span><span>Samsung</span><span>Cheil Germany</span><span>Hochschule Fresenius</span><span>Masterplan</span><span>Elanco</span><span>CtrlQS</span><span>Henkel</span><span>NIVEA</span><span>IWC Schaffhausen</span><span>Ottobock</span><span>GROHE</span><span>Elite Travel Study Work Services</span><span>GrandSignature Properties</span></div>
-            </div>
-        </div>
-    </section>
-    <section class="delivery-section">
-        <div class="container">
-            <h2>What We Bring to Your Next Project</h2>
-            <div class="delivery-grid">
-                <div><h3>Experienced Leadership</h3><p>International technology exposure, hands-on engineering knowledge and practical delivery coordination from discovery to launch.</p></div>
-                <div><h3>Flexible Engineering Capacity</h3><p>Access to an experienced Nigeria-based technical team for web, app, backend, DevOps and platform support.</p></div>
-                <div><h3>Long-Term Partnership</h3><p>Clear communication, Agile collaboration and an emphasis on maintainable systems that support future business growth.</p></div>
-            </div>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section class="projects-grid-section">
+    <div class="container">
+        <h2>Selected Projects &amp; Delivery Capabilities</h2>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Let’s Build Something Worth Showcasing</h2>
-            <p>Planning a corporate website, custom application, enterprise platform or digital transformation initiative? Tell us what you want to achieve and let’s discuss a practical way forward.</p>
-            <a href="contact.html" class="btn">Request a Project Discussion</a> <a href="https://wa.me/2348109917302" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-        </div>
-    </section>
+        <p class="section-lead">
+            Explore examples of our own website delivery alongside
+            the capabilities shaped by international professional
+            and agency experience.
+        </p>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Elite Digital Consulting</h3>
-                    <p>Your partner in digital transformation.</p>
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing Elite Travel Study Work Services"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        Website Development &amp; Digital Experience
+                    </span>
+                    <h3>Elite Travel Study Work Services</h3>
+                    <p>
+                        A dedicated travel, study and work services website
+                        designed to present complex offerings clearly,
+                        guide visitors through services and make enquiries
+                        straightforward.
+                    </p>
+                    <a
+                        href="https://elitetravelstudywork.com/"
+                        class="btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Website
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="our-services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing GrandSignature Properties"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        Real Estate Website &amp; Brand Presence
+                    </span>
+                    <h3>GrandSignature Properties</h3>
+                    <p>
+                        A property-focused digital presence developed
+                        to communicate real estate offerings, build brand
+                        credibility and connect prospective clients
+                        with the business.
+                    </p>
+                    <a href="contact.html" class="btn">
+                        Discuss Similar Work
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah,<br>beside Avista Beach, Lekki-Epe Expressway,<br>Eti-Osa LGA, Lagos 106104, Nigeria</p>
-                    <p>Email: info@elitedigitalglobalconsulting.com</p>
-                    <p>WhatsApp: <a href="https://wa.me/2348109917302" style="color:#fff">+234 810 991 7302</a></p>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing Enterprise Website and Platform Engineering"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        Frontend, Backend &amp; CMS Delivery
+                    </span>
+                    <h3>Enterprise Website &amp; Platform Engineering</h3>
+                    <p>
+                        Experience building and maintaining responsive
+                        websites, content-managed experiences and connected
+                        digital platforms, with attention to quality
+                        and scalability.
+                    </p>
+                    <a href="contact.html" class="btn">
+                        Discuss Your Platform
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/elite_consulting_official/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.twitter.com/@eliteconsulting_official" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        
-                        <a href="https://www.instagram.com/elite_consulting_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+            </article>
+
+            <!-- PROJECT 4 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing Technical Project Leadership"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        Agile, Scrum &amp; Cross-Functional Delivery
+                    </span>
+                    <h3>Technical Project Leadership</h3>
+                    <p>
+                        Coordinating requirements, engineering priorities,
+                        stakeholders and delivery workflows across
+                        multidisciplinary teams and international
+                        digital environments.
+                    </p>
+                    <a href="contact.html" class="btn">
+                        Request a Project Discussion
+                    </a>
                 </div>
-            </div>
-            <div class="copyright">
-                &copy; 2026 Elite Digital Consulting. All rights reserved.
+            </article>
+
+            <!-- PROJECT 5 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing Digital Content and Brand Experiences"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        CMS Operations &amp; Digital Campaign Delivery
+                    </span>
+                    <h3>Digital Content &amp; Brand Experiences</h3>
+                    <p>
+                        Professional experience supporting brand-led
+                        digital content, website operations and
+                        cross-functional execution within agency
+                        and corporate environments.
+                    </p>
+                    <a href="our-services.html" class="btn">
+                        Explore Our Services
+                    </a>
+                </div>
+            </article>
+
+            <!-- PROJECT 6 -->
+            <article class="project-item">
+                <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional imagery representing Cloud, DevOps and Product Development"
+                    loading="lazy"
+                >
+                <div class="project-content">
+                    <span class="project-category">
+                        Engineering Support &amp; Scalable Systems
+                    </span>
+                    <h3>Cloud, DevOps &amp; Product Development</h3>
+                    <p>
+                        Our Nigeria-based technical network supports
+                        modern application development, cloud and DevOps
+                        workflows, deployment processes and ongoing
+                        platform improvement.
+                    </p>
+                    <a href="contact.html" class="btn">
+                        Talk to Our Team
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- INTERNATIONAL EXPERIENCE -->
+<section class="experience-section">
+    <div class="container">
+
+        <h2>
+            International Brands &amp; Organizations
+            Behind Our Experience
+        </h2>
+
+        <p>
+            Our professional and agency-delivered experience includes
+            work involving Samsung, Cheil Germany, Hochschule Fresenius,
+            Masterplan, Elanco, CtrlQS, Henkel, NIVEA, IWC Schaffhausen,
+            Ottobock and GROHE. Our own website projects also include
+            Elite Travel Study Work Services and GrandSignature Properties.
+        </p>
+
+        <p class="experience-note">
+            These references reflect experience gained across agency,
+            employment and independent project settings; they do not imply
+            that every organization directly contracted
+            Elite Digital Consulting.
+        </p>
+
+        <div
+            class="brand-marquee"
+            aria-label="Organizations and brands represented in our experience"
+        >
+            <div class="brand-track">
+                <span>Samsung</span>
+                <span>Cheil Germany</span>
+                <span>Hochschule Fresenius</span>
+                <span>Masterplan</span>
+                <span>Elanco</span>
+                <span>CtrlQS</span>
+                <span>Henkel</span>
+                <span>NIVEA</span>
+                <span>IWC Schaffhausen</span>
+                <span>Ottobock</span>
+                <span>GROHE</span>
+                <span>Elite Travel Study Work Services</span>
+                <span>GrandSignature Properties</span>
+
+                <!-- Repeated for continuous scrolling -->
+                <span>Samsung</span>
+                <span>Cheil Germany</span>
+                <span>Hochschule Fresenius</span>
+                <span>Masterplan</span>
+                <span>Elanco</span>
+                <span>CtrlQS</span>
+                <span>Henkel</span>
+                <span>NIVEA</span>
+                <span>IWC Schaffhausen</span>
+                <span>Ottobock</span>
+                <span>GROHE</span>
+                <span>Elite Travel Study Work Services</span>
+                <span>GrandSignature Properties</span>
             </div>
         </div>
-    </footer>
+
+    </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery-section">
+    <div class="container">
+
+        <h2>What We Bring to Your Next Project</h2>
+
+        <div class="delivery-grid">
+
+            <div>
+                <h3>Experienced Leadership</h3>
+                <p>
+                    International technology exposure, hands-on
+                    engineering knowledge and practical delivery
+                    coordination from discovery to launch.
+                </p>
+            </div>
+
+            <div>
+                <h3>Flexible Engineering Capacity</h3>
+                <p>
+                    Access to an experienced Nigeria-based technical
+                    team for web, app, backend, DevOps
+                    and platform support.
+                </p>
+            </div>
+
+            <div>
+                <h3>Long-Term Partnership</h3>
+                <p>
+                    Clear communication, Agile collaboration
+                    and an emphasis on maintainable systems
+                    that support future business growth.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+    <div class="container">
+
+        <h2>Let’s Build Something Worth Showcasing</h2>
+
+        <p>
+            Planning a corporate website, custom application,
+            enterprise platform or digital transformation initiative?
+            Tell us what you want to achieve and let’s discuss
+            a practical way forward.
+        </p>
+
+        <a href="contact.html" class="btn">
+            Request a Project Discussion
+        </a>
+
+        <a
+            href="https://wa.me/2348109917302"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Chat on WhatsApp
+        </a>
+
+    </div>
+</section>
+
+<!-- ==================================================
+     UNIFIED FIVE-COLUMN FOOTER
+     ================================================== -->
+<footer>
+    <div class="container">
+
+        <div class="footer-content">
+
+            <!-- COMPANY -->
+            <div class="footer-col">
+                <h3>Elite Digital Consulting</h3>
+                <p>
+                    Technology consulting, software engineering,
+                    DevOps and digital delivery.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="our-services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- TERMS -->
+            <div class="footer-col">
+                <h3>Terms</h3>
+                <ul>
+                    <li>
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="terms-and-conditions.html">
+                            Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="refund-policy.html">
+                            Refund Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://elitetravelstudywork.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Elite Travel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Get a Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+
+                <p>
+                    Tina Johnson Close, Coastal Road,
+                    Salem Okun-Ajah, beside Avista Beach,
+                    Lekki-Epe Expressway, Eti-Osa LGA,
+                    Lagos 106104, Nigeria
+                </p>
+
+                <p>
+                    Email:
+                    <a href="mailto:info@elitedigitalglobalconsulting.com">
+                        info@elitedigitalglobalconsulting.com
+                    </a>
+                </p>
+
+                <p>
+                    WhatsApp:
+                    <a
+                        href="https://wa.me/2348109917302"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        +234 810 991 7302
+                    </a>
+                </p>
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.facebook.com/elite_consulting_official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@eliteconsulting_official"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok"
+                    >
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/elite_consulting_official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Elite Digital Consulting.
+            All rights reserved.
+        </div>
+
+    </div>
+</footer>
 
 </body>
 </html>

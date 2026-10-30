@@ -446,6 +446,25 @@ footer a{color:inherit}.cta-section .btn{margin-top:8px}
 .cta-section p{font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.5;max-width:950px}
 @media(max-width:768px){.about-hero-section h1{font-size:clamp(1.65rem,5.2vw,2.1rem)}.about-hero-section p{font-size:1rem}}
 @media(max-width:600px){.team-grid>.team-member h3{min-height:0}}
+
+/* Unified five-column site footer — use on all Elite Digital Consulting pages */
+footer{background:#0056b3;color:#fff;padding:42px 0 20px;font-size:14px}
+footer .container{max-width:1250px;margin:0 auto;padding:20px 30px}
+footer .footer-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr 1.5fr .85fr;gap:32px;align-items:start;margin-bottom:0}
+footer .footer-col{min-width:0;max-width:none;width:auto;flex:none;margin:0;text-align:left}
+footer .footer-col h3{font-size:17px;line-height:1.4;min-height:24px;margin:0 0 20px;color:#fff;font-weight:700}
+footer .footer-col p,footer .footer-col li{font-size:14px;line-height:1.8}
+footer .footer-col p{margin:0 0 14px;overflow-wrap:anywhere}
+footer .footer-col ul{list-style:none;margin:0;padding:0}
+footer .footer-col li{margin:0 0 8px}
+footer .footer-col a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+footer .footer-col a:hover,footer .footer-col a:focus-visible{text-decoration:underline}
+footer .social-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+footer .social-links a{font-size:14px;line-height:1.8;display:inline-flex;align-items:center;gap:9px}
+footer .social-links i{width:18px;text-align:center;font-size:17px}
+footer .copyright{text-align:center;border-top:1px solid rgba(255,255,255,.25);margin-top:35px;padding-top:22px;font-size:13px}
+@media(max-width:1000px){footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}}
+@media(max-width:650px){footer .container{padding:20px}footer .footer-grid{grid-template-columns:1fr;gap:26px}footer .footer-col{text-align:center;margin:0}footer .footer-col h3{min-height:0;margin-bottom:12px}footer .social-links{align-items:center}}
 </style></head>
 
 <body><header>
@@ -515,32 +534,48 @@ footer a{color:inherit}.cta-section .btn{margin-top:8px}
 </section>
 <footer>
 <div class="container">
-<div class="footer-content">
+<div class="footer-grid">
 <div class="footer-col">
 <h3>Elite Digital Consulting</h3>
-<p>Technology consulting, software engineering, DevOps and digital delivery for ambitious organizations.</p>
+<p>Technology consulting, software engineering, DevOps and digital delivery.</p>
 </div>
 <div class="footer-col">
 <h3>Quick Links</h3>
 <ul>
 <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li> <li><a href="our-services.html">Services</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="our-services.html">Services</a></li>
 <li><a href="portfolio.html">Portfolio</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </div>
-<div class="footer-col"><h3>Contact Info</h3><p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p><p>Email: info@elitedigitalglobalconsulting.com</p><p>WhatsApp: <a href="https://wa.me/2348109917302" style="color:inherit">+234 810 991 7302</a></p></div>
+<div class="footer-col">
+<h3>Terms</h3>
+<ul>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms-and-conditions.html">Conditions</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="refund-policy.html">Refund Policy</a></li>
+<li><a href="https://elitetravelstudywork.com/" target="_blank" rel="noopener noreferrer">Elite Travel</a></li>
+<li><a href="contact.html">Get a Quote</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Contact Info</h3>
+<p>Tina Johnson Close, Coastal Road, Salem Okun-Ajah, beside Avista Beach, Lekki-Epe Expressway, Eti-Osa LGA, Lagos 106104, Nigeria</p>
+<p>Email: <a href="mailto:info@elitedigitalglobalconsulting.com">info@elitedigitalglobalconsulting.com</a></p>
+<p>WhatsApp: <a href="https://wa.me/2348109917302" target="_blank" rel="noopener noreferrer">+234 810 991 7302</a></p>
+</div>
 <div class="footer-col">
 <h3>Follow Us</h3>
 <div class="social-links">
-<a aria-label="Facebook" href="https://www.facebook.com/elite_consulting_official/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a aria-label="TikTok" href="https://www.tiktok.com/@eliteconsulting_official" target="_blank"><i class="fab fa-tiktok"></i></a>
-<a aria-label="Twitter" href="https://www.twitter.com/@eliteconsulting_official" target="_blank"><i class="fab fa-twitter"></i></a>
-<a aria-label="Instagram" href="https://www.instagram.com/elite_consulting_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i>Facebook</a>
+<a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i>TikTok</a>
+<a href="https://www.instagram.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i>Instagram</a>
 </div>
 </div>
 </div>
-<div class="copyright">© 2026 Elite Digital Consulting. All rights reserved.</div>
+<div class="copyright">&copy; 2026 Elite Digital Consulting. All rights reserved.</div>
 </div>
 </footer>
 </body>
