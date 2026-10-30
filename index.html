@@ -765,6 +765,50 @@ a.btn{width:260px;max-width:100%;min-height:52px;padding:12px 18px;
  .showcase-item{padding:0}
  .showcase-content{padding:20px}
 }
+
+/* Refined enterprise typography and consistent card geometry — October 2026 */
+:root{font-size:16px}
+body{font-size:16px;line-height:1.6}
+.hero-section-main{padding:90px 20px;min-height:420px}
+.hero-section-main .hero-overlay{max-width:740px;padding:34px 32px}
+.hero-section-main h1{font-size:clamp(2rem,3.1vw,2.65rem);line-height:1.17;letter-spacing:-.025em;margin:0 0 18px}
+.hero-section-main p{font-size:1.05rem;line-height:1.65;margin-bottom:18px}
+.why-choose-section h2,.services-showcase-section h2,.featured-content h2,
+.clients-section h2,.testimonials-section h2,.extensive-offerings h2{
+ font-size:clamp(1.65rem,2.5vw,1.95rem);line-height:1.25;letter-spacing:-.018em;margin-top:0;margin-bottom:24px}
+.why-choose-item h3,.showcase-content h3,.offering-item h3,.service-item h3{
+ font-size:1.125rem;line-height:1.35;letter-spacing:-.01em;font-weight:700}
+.why-choose-item h3{min-height:2.7em;margin-bottom:12px}
+.showcase-content h3{min-height:2.7em;margin-bottom:12px}
+.offering-item h3{min-height:2.7em;margin-bottom:12px}
+.service-item h3{min-height:2.7em;margin-bottom:14px}
+.why-choose-item p,.showcase-content p,.offering-item p,.service-item li{
+ font-size:.9375rem;line-height:1.65}
+.why-choose-item,.offering-item,.service-item{height:100%}
+.why-choose-item{padding:22px}
+.showcase-content{padding:22px}
+.offering-item{padding:26px 22px}
+.testimonials-section h2{margin-bottom:34px}
+.testimonial-item p.quote{font-size:1rem;line-height:1.65}
+.testimonial-item .client-info strong{font-size:1.05rem}
+.cta-section p{font-size:1.125rem;line-height:1.6;max-width:940px;margin:0 auto 25px}
+.intro-text-section p{font-size:1.05rem}
+a.btn{width:260px;max-width:100%;min-height:50px;font-size:.9375rem;padding:12px 18px}
+@media(max-width:768px){
+ .hero-section-main{padding:75px 18px;min-height:360px}
+ .hero-section-main h1{font-size:clamp(1.75rem,6vw,2.25rem)}
+ .hero-section-main p{font-size:1rem}
+ .why-choose-item h3,.showcase-content h3,.offering-item h3,.service-item h3{min-height:0}
+ .why-choose-grid,.showcase-grid,.offerings-grid,.testimonial-grid{gap:20px}
+}
+@media(max-width:480px){
+ .hero-section-main{padding:65px 14px}
+ .hero-section-main .hero-overlay{padding:26px 18px}
+ .hero-section-main h1{font-size:1.75rem}
+ .why-choose-section h2,.services-showcase-section h2,.featured-content h2,
+ .clients-section h2,.testimonials-section h2,.extensive-offerings h2{font-size:1.6rem}
+ a.btn{width:100%;max-width:320px;font-size:.9375rem}
+}
 </style>
 </head>
 <body>

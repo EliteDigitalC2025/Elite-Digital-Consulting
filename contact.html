@@ -681,7 +681,21 @@
             .contact-flex-container { grid-template-columns: 1fr; }
             .contact-form-col, .contact-info-col { height: auto; }
         }
-    </style>
+    
+/* Refined 2026 contact-page typography and consistent panel alignment */
+.hero-section { min-height: 350px; padding: 75px 20px; }
+.hero-overlay { padding: 30px 28px; }
+.hero-section h1 { font-size: clamp(1.9rem, 3.4vw, 2.65rem); line-height: 1.18; letter-spacing: .01em; }
+.hero-section p { font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.6; }
+.contact-form-col h2, .contact-info-col h2 { font-size: clamp(1.45rem, 2vw, 1.75rem); line-height: 1.3; min-height: 2.6em; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.map-section h2 { font-size: clamp(1.6rem, 2.5vw, 2rem); }
+.contact-form-col, .contact-info-col { padding: 30px; }
+.contact-info-details p { font-size: .97rem; line-height: 1.65; }
+.form-group button { min-height: 48px; font-size: .95rem; font-weight: 600; }
+.follow-us-block h3 { font-size: 1.1rem; }
+@media(max-width:768px) { .hero-section { min-height: 290px; padding: 60px 16px; } .contact-form-col h2, .contact-info-col h2 { min-height: 0; } }
+@media(max-width:480px) { .hero-section h1 { font-size: 1.85rem; } .contact-form-col, .contact-info-col { padding: 22px; } }
+</style>
 </head>
 <body>
     <header>
