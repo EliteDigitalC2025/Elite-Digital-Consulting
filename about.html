@@ -258,80 +258,6 @@
             margin-bottom: 30px;
         }
 
-        /* Footer Styling (Common Styling) */
-        footer {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 40px 0 20px;
-            font-size: 0.9em;
-        }
-
-        footer .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-col {
-            flex: 1;
-            min-width: 200px;
-            max-width: 280px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.2em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-col ul li a {
-            text-decoration: none;
-            color: #e0e0e0;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: #fff;
-        }
-
-        .footer-col p {
-            margin-bottom: 10px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 20px;
-        }
-
         /* Responsive Design (Common Media Queries) */
         @media (max-width: 768px) {
             header .container {
@@ -372,16 +298,6 @@
 
             .team-grid {
                 grid-template-columns: 1fr; /* Single column for team members on small screens */
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-col {
-                text-align: center;
-                margin-bottom: 20px;
             }
         }
 
@@ -447,24 +363,23 @@ footer a{color:inherit}.cta-section .btn{margin-top:8px}
 @media(max-width:768px){.about-hero-section h1{font-size:clamp(1.65rem,5.2vw,2.1rem)}.about-hero-section p{font-size:1rem}}
 @media(max-width:600px){.team-grid>.team-member h3{min-height:0}}
 
-/* Unified five-column site footer — use on all Elite Digital Consulting pages */
-footer{background:#0056b3;color:#fff;padding:42px 0 20px;font-size:14px}
+/* Master footer: identical five-column design across the website */
+footer{background:#0056b3;color:#fff;padding:40px 0 20px;font-size:14px}
 footer .container{max-width:1250px;margin:0 auto;padding:20px 30px}
-footer .footer-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr 1.5fr .85fr;gap:32px;align-items:start;margin-bottom:0}
-footer .footer-col{min-width:0;max-width:none;width:auto;flex:none;margin:0;text-align:left}
-footer .footer-col h3{font-size:17px;line-height:1.4;min-height:24px;margin:0 0 20px;color:#fff;font-weight:700}
+footer .footer-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,.9fr) minmax(0,1.5fr) minmax(0,.85fr);gap:32px;align-items:start;margin-bottom:35px}
+footer .footer-col{min-width:0;max-width:none;margin:0;padding:0;text-align:left}
+footer .footer-col h3{color:#fff;font-size:17px;font-weight:700;line-height:1.4;min-height:24px;margin:0 0 20px}
 footer .footer-col p,footer .footer-col li{font-size:14px;line-height:1.8}
 footer .footer-col p{margin:0 0 14px;overflow-wrap:anywhere}
 footer .footer-col ul{list-style:none;margin:0;padding:0}
 footer .footer-col li{margin:0 0 8px}
 footer .footer-col a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
 footer .footer-col a:hover,footer .footer-col a:focus-visible{text-decoration:underline}
-footer .social-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-footer .social-links a{font-size:14px;line-height:1.8;display:inline-flex;align-items:center;gap:9px}
-footer .social-links i{width:18px;text-align:center;font-size:17px}
-footer .copyright{text-align:center;border-top:1px solid rgba(255,255,255,.25);margin-top:35px;padding-top:22px;font-size:13px}
+footer .social-links{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:16px}
+footer .social-links a{font-size:21px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center}
+footer .copyright{text-align:center;border-top:1px solid rgba(255,255,255,.25);padding-top:22px;margin-top:0;font-size:13px;line-height:1.6}
 @media(max-width:1000px){footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}}
-@media(max-width:650px){footer .container{padding:20px}footer .footer-grid{grid-template-columns:1fr;gap:26px}footer .footer-col{text-align:center;margin:0}footer .footer-col h3{min-height:0;margin-bottom:12px}footer .social-links{align-items:center}}
+@media(max-width:650px){footer .container{padding:20px}footer .footer-grid{grid-template-columns:1fr;gap:26px}footer .footer-col{text-align:center}footer .footer-col h3{min-height:0;margin-bottom:12px}footer .social-links{justify-content:center}}
 </style></head>
 
 <body><header>
@@ -569,9 +484,9 @@ footer .copyright{text-align:center;border-top:1px solid rgba(255,255,255,.25);m
 <div class="footer-col">
 <h3>Follow Us</h3>
 <div class="social-links">
-<a href="https://www.facebook.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i>Facebook</a>
-<a href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i>TikTok</a>
-<a href="https://www.instagram.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i>Instagram</a>
+<a aria-label="Facebook" href="https://www.facebook.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@eliteconsulting_official" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/elite_consulting_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 </div>
 </div>
 </div>
